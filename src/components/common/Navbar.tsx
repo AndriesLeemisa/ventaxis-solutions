@@ -72,15 +72,32 @@ export const Navbar: React.FC<NavbarProps> = ({
             </span>
           </div>
 
-          <div className="flex items-center gap-4 text-xs">
+          <div className="flex items-center gap-3 text-xs">
             <a
               href={`tel:${config.telephone.replace(/\s+/g, '')}`}
               className="flex items-center gap-1.5 hover:text-[#20B8CE] transition-colors"
+              title="Office Line"
             >
               <Phone className="w-3.5 h-3.5 text-[#1479D4]" />
               <span className="font-medium">{config.telephone}</span>
             </a>
+            <span className="text-[#EEF3F7]/30">/</span>
+            <a
+              href={`tel:${config.emergencyHotline.replace(/\s+/g, '')}`}
+              className="flex items-center gap-1.5 hover:text-[#20B8CE] transition-colors"
+              title="Mobile & WhatsApp"
+            >
+              <span className="font-medium">{config.emergencyHotline}</span>
+            </a>
             <span className="text-[#EEF3F7]/30">|</span>
+            <a
+              href={`mailto:${config.email}`}
+              className="hidden sm:flex items-center gap-1.5 hover:text-[#20B8CE] transition-colors"
+            >
+              <Mail className="w-3.5 h-3.5 text-[#20B8CE]" />
+              <span>{config.email}</span>
+            </a>
+            <span className="hidden sm:inline-block text-[#EEF3F7]/30">|</span>
             <button
               onClick={onOpenBrandKit}
               className="hidden lg:flex items-center gap-1 hover:text-[#20B8CE] transition-colors"

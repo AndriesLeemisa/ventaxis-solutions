@@ -12,9 +12,9 @@ export const PRODUCTS: Product[] = [
     tagline: 'High-Volume Low-Speed airflow for massive warehouses and distribution centres.',
     description: 'Engineered for massive open-span industrial facilities, the AeroVortex 7.3m employs 6 aerofoil-extruded aircraft-grade aluminium blades driven by an ultra-efficient Permanent Magnet Synchronous Motor (PMSM). Provides deep destratification and evaporative cooling effect up to 6°C across floor footprints exceeding 1,800 m² with negligible noise.',
     images: [
-      'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80'
+      '/images/market-industrial.jpg',
+      '/images/product-commercial-ceiling.jpg',
+      '/images/after-ventaxis-airflow.png'
     ],
     manufacturer: 'VentAxis Engineering Systems',
     model: 'VAX-HVLS-7300-PMSM',
@@ -65,8 +65,8 @@ export const PRODUCTS: Product[] = [
     tagline: 'Architectural-grade low-noise HVLS fan for institutional halls and commercial spaces.',
     description: 'Designed specifically for schools, sports complexes, religious auditoriums, and commercial transit halls where acoustics and sleek aesthetics are paramount. Delivers gentle continuous air movement across 850 m² with whisper-quiet sound emission under 36 dB(A).',
     images: [
-      'https://images.unsplash.com/photo-1541888946425-d0fbb186c5f7?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80'
+      '/images/market-commercial.jpg',
+      '/images/product-commercial-ceiling.jpg'
     ],
     manufacturer: 'VentAxis Engineering Systems',
     model: 'VAX-HVLS-4900-COMM',
@@ -116,8 +116,8 @@ export const PRODUCTS: Product[] = [
     tagline: 'Heavy-duty steel 3-blade commercial ceiling fan for high-traffic institutions.',
     description: 'Rugged all-metal commercial ceiling fan engineered for South African schools, government clinics, correctional facilities, and light commercial buildings. Fitted with heavy-gauge balanced steel blades and double-sealed ball bearings for continuous 24/7 duty.',
     images: [
-      'https://images.unsplash.com/photo-1527011046414-4781f1f94f8c?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80'
+      '/images/product-ceiling-charcoal.jpg',
+      '/images/hero-living-fan.jpg'
     ],
     manufacturer: 'VentAxis Industrial Components',
     model: 'VAX-AGC-1400-HD',
@@ -166,8 +166,8 @@ export const PRODUCTS: Product[] = [
     tagline: 'High-velocity 30-inch oscillating wall fan with reinforced steel finger guard.',
     description: 'Designed to deliver directional cooling in congested workshops, factory assembly lines, and commercial kitchens where floor space must be kept unobstructed. Features an 80-degree wide oscillation sweep and heavy-duty steel wall mounting bracket.',
     images: [
-      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=1200&q=80'
+      '/images/product-industrial-wall.jpg',
+      '/images/market-industrial.jpg'
     ],
     manufacturer: 'VentAxis Industrial Components',
     model: 'VAX-SB-750-W',
@@ -216,7 +216,7 @@ export const PRODUCTS: Product[] = [
     tagline: 'Adjustable heavy-base industrial pedestal fan with high air throw.',
     description: 'A mobile spot-cooling powerhouse for industrial plants, event halls, and temporary assembly areas. Built on a cast-iron 18 kg anti-topple weighted base with telescopic height adjustment from 1.5m to 2.0m.',
     images: [
-      'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80'
+      '/images/prod-pedestal-750.png'
     ],
     manufacturer: 'VentAxis Industrial Components',
     model: 'VAX-SB-750-P',
@@ -262,7 +262,7 @@ export const PRODUCTS: Product[] = [
     tagline: 'High-volume portable steel barrel fan for rapid shopfloor air turnover.',
     description: 'Designed for heavy plant applications requiring focused high-velocity laminar air blast. Housed in a heavy-gauge 1.6mm rolled steel cylindrical drum with 360-degree tilt capability and heavy-duty puncture-proof rubber transport wheels.',
     images: [
-      'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80'
+      '/images/product-industrial-floor.jpg'
     ],
     manufacturer: 'VentAxis Industrial Components',
     model: 'VAX-WB-900-DF',
@@ -308,7 +308,7 @@ export const PRODUCTS: Product[] = [
     tagline: 'Industrial mobile cooling station with high throw distance up to 35 metres.',
     description: 'The RollStorm 1100 is an ultra-high performance mobile air cannon developed for blast furnace operations, heavy machinery assembly, and mine surface support workshops. Delivers a focused air stream reaching personnel up to 35m away.',
     images: [
-      'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1200&q=80'
+      '/images/prod-mobile-1100.png'
     ],
     manufacturer: 'VentAxis Engineering Systems',
     model: 'VAX-RS-1100-MOB',
@@ -358,8 +358,7 @@ export const PRODUCTS: Product[] = [
     tagline: 'Flanged high-flow axial fan for wall mounting and through-wall continuous ventilation.',
     description: 'Designed for general factory air renewal and building envelope ventilation. Aerodynamically profiled polypropylene blades with pitch adjustment at standstill, housed within an electro-galvanized cylindrical steel casing with dual mounting flanges.',
     images: [
-      'https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80'
+      '/images/prod-axial-630.png'
     ],
     manufacturer: 'VentAxis Engineered Ventilation',
     model: 'VAX-AX-630-4D',
@@ -405,7 +404,7 @@ export const PRODUCTS: Product[] = [
     tagline: 'High static pressure centrifugal fan for complex industrial duct systems.',
     description: 'The CentriForce series features a precision-balanced backward-curved single-inlet centrifugal impeller designed to overcome high system resistance in industrial ductwork, extraction hoods, and multi-stage air filtration banks.',
     images: [
-      'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80'
+      '/images/prod-centri-500.png'
     ],
     manufacturer: 'VentAxis Engineered Ventilation',
     model: 'VAX-CF-500-BC',
@@ -451,7 +450,7 @@ export const PRODUCTS: Product[] = [
     tagline: 'Compact low-profile mixed flow inline fan for commercial HVAC ducting.',
     description: 'Combines the high airflow of an axial fan with the static pressure capability of a centrifugal fan. The central motor and impeller unit can be removed from the duct line without dismantling connected spiral or flexible ducting.',
     images: [
-      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80'
+      '/images/prod-inline-315.png'
     ],
     manufacturer: 'VentAxis Engineered Ventilation',
     model: 'VAX-DM-315-MF',
@@ -497,8 +496,7 @@ export const PRODUCTS: Product[] = [
     tagline: 'Weatherproof UV-stabilised industrial roof cowl extractor for warehouse ridge lines.',
     description: 'Engineered specifically for South Africa’s extreme UV radiation and severe Gauteng summer hailstorms. Aerodynamic weather cowl in heavy-duty UV-stabilised fiberglass reinforced polyester (FRP) with vertical discharge and automatic backdraft dampers.',
     images: [
-      'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80'
+      '/images/prod-roof-800.png'
     ],
     manufacturer: 'VentAxis Engineered Ventilation',
     model: 'VAX-AT-800-VD',
@@ -544,7 +542,7 @@ export const PRODUCTS: Product[] = [
     tagline: 'High-velocity utility blower for process cooling and confined workspace purging.',
     description: 'Heavy-duty centrifugal utility blower engineered for high volume air delivery through long runs of flexible ducting. Perfect for tank ventilation, underground utility tunnel purge, and equipment cooling in industrial facilities.',
     images: [
-      'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1200&q=80'
+      '/images/prod-blower-turbo.png'
     ],
     manufacturer: 'VentAxis Engineered Ventilation',
     model: 'VAX-TV-400-UB',
@@ -594,8 +592,7 @@ export const PRODUCTS: Product[] = [
     tagline: 'High-efficiency industrial evaporative cooling unit with 100% fresh chilled air.',
     description: 'Cools massive industrial buildings at up to 80% lower electricity consumption than conventional refrigerated HVAC. Utilises Munters high-efficiency CELdek 5090 cooling pads with automatic water dumping, salinity monitoring, and inverter speed modulation.',
     images: [
-      'https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80'
+      '/images/prod-evap-18000.png'
     ],
     manufacturer: 'VentAxis Specialist Systems',
     model: 'VAX-AB-18K-DD',
@@ -642,7 +639,7 @@ export const PRODUCTS: Product[] = [
     tagline: 'Life safety high-temperature emergency smoke and heat extraction fan.',
     description: 'Certified to European Standard EN 12101-3 and SANS compliance for 400°C operation for a minimum duration of 120 minutes. In an emergency fire event, the PyroGuard extracts toxic smoke and gases from escape routes and shopping mall atriums to maintain breathable visibility.',
     images: [
-      'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80'
+      '/images/prod-smoke-400.png'
     ],
     manufacturer: 'VentAxis Specialist Systems',
     model: 'VAX-PG-800-F400',
@@ -692,7 +689,7 @@ export const PRODUCTS: Product[] = [
     tagline: 'High-pressure cyclonic separator with pulse-jet cartridge filter for airborne particulates.',
     description: 'Engineered for timber processing, metal grinding, and cement handling operations. Combines primary centrifugal cyclonic separation for coarse chips with automated reverse pulse-jet compressed air cleaning for fine PM2.5/PM10 dust.',
     images: [
-      'https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80'
+      '/images/prod-dust-cyclone.png'
     ],
     manufacturer: 'VentAxis Specialist Systems',
     model: 'VAX-AC-5500-DEX',
@@ -738,7 +735,7 @@ export const PRODUCTS: Product[] = [
     tagline: 'Solid polypropylene chemical-resistant centrifugal blower for acid and laboratory fumes.',
     description: 'Constructed from one-piece injection-moulded solid polypropylene (PP) resistant to aggressive acids, alkalis, solvent vapors, and saline industrial atmospheres. Designed for electroplating plants, battery charging rooms, and university science laboratories.',
     images: [
-      'https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&w=1200&q=80'
+      '/images/prod-fume-poly.png'
     ],
     manufacturer: 'VentAxis Specialist Systems',
     model: 'VAX-CV-315-PP',
@@ -784,7 +781,7 @@ export const PRODUCTS: Product[] = [
     tagline: 'Heavy-duty skid-mounted positive pressure blower with duct cassette for hazardous workspace purging.',
     description: 'A rugged specialized positive pressure system designed for deep utility trenches, underground water chambers, tunnel boring portals, and heavy industrial manholes. Rapidly dilutes hazardous combustible gases and displaces stagnant air with high-pressure clean outdoor atmosphere.',
     images: [
-      'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1200&q=80'
+      '/images/prod-special-underground.png'
     ],
     manufacturer: 'VentAxis Specialist Systems',
     model: 'VAX-AP-500-SKID',

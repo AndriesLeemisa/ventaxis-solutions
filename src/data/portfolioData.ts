@@ -20,7 +20,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     ],
     completionStatus: 'Completed & Certified',
     isDemonstrationContent: false,
-    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/market-industrial.jpg',
   },
   {
     id: 'proj-02-school-hall-jhb',
@@ -41,7 +41,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     ],
     completionStatus: 'Completed & Certified',
     isDemonstrationContent: false,
-    image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/ind-education.png',
   },
   {
     id: 'proj-03-worship-auditorium',
@@ -62,7 +62,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     ],
     completionStatus: 'Completed & Certified',
     isDemonstrationContent: false,
-    image: 'https://images.unsplash.com/photo-1548625361-096701196420?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/ind-religious.png',
   },
   {
     id: 'proj-04-steel-fabrication',
@@ -83,7 +83,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     ],
     completionStatus: 'Completed & Certified',
     isDemonstrationContent: false,
-    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/prod-axial-630.png',
   },
   {
     id: 'proj-05-clinic-waiting-areas',
@@ -104,7 +104,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     ],
     completionStatus: 'Completed & Certified',
     isDemonstrationContent: false,
-    image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/ind-healthcare.png',
   },
   {
     id: 'proj-06-commercial-retail-atrium',
@@ -125,6 +125,6 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     ],
     completionStatus: 'Demonstration Benchmark',
     isDemonstrationContent: true,
-    image: 'https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/product-commercial-ceiling.jpg',
   }
 ];

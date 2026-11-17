@@ -25,7 +25,7 @@ export const INDUSTRIES: Industry[] = [
       'DuctMaster 315mm Inline Mixed-Flow Fan'
     ],
     standardsHighlight: 'Meets Department of Basic Education (DBE) Norms & Standards for Public School Infrastructure and SANS 10400-O.',
-    image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/ind-education.png',
     iconName: 'GraduationCap'
   },
   {
@@ -52,7 +52,7 @@ export const INDUSTRIES: Industry[] = [
       'ChemVent Polypropylene Air Extraction Blowers'
     ],
     standardsHighlight: 'Aligned with National Department of Health Guidelines for Environmental Infection Control in Healthcare Facilities.',
-    image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/ind-healthcare.png',
     iconName: 'HeartPulse'
   },
   {
@@ -79,7 +79,7 @@ export const INDUSTRIES: Industry[] = [
       'AeroTop Low-Profile Roof Extractors'
     ],
     standardsHighlight: 'Acoustically tested and verified under 38 dB(A) to satisfy sound engineering benchmarks for live recording spaces.',
-    image: 'https://images.unsplash.com/photo-1548625361-096701196420?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/ind-religious.png',
     iconName: 'Church'
   },
   {
@@ -106,7 +106,7 @@ export const INDUSTRIES: Industry[] = [
       'AeroGlide Premium Commercial Ceiling Fans'
     ],
     standardsHighlight: 'Contributes toward Green Star SA energy rating credits and SANS 10400-XA Energy Usage in Buildings.',
-    image: 'https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/market-commercial.jpg',
     iconName: 'Building2'
   },
   {
@@ -134,7 +134,7 @@ export const INDUSTRIES: Industry[] = [
       'AeroCyclone Dust Extraction Systems'
     ],
     standardsHighlight: 'Strict compliance with OHSAct Environmental Regulations for Workplaces (Thermal Conditions & Ventilation).',
-    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/market-industrial.jpg',
     iconName: 'Factory'
   },
   {
@@ -162,7 +162,7 @@ export const INDUSTRIES: Industry[] = [
       'CentriForce Kitchen Extraction Fans'
     ],
     standardsHighlight: 'Complies with Municipal Food Premises Hygiene By-Laws and SANS 10400-O Commercial Kitchen Standards.',
-    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/market-hospitality.jpg',
     iconName: 'UtensilsCrossed'
   }
 ];

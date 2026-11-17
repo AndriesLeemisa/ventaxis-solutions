@@ -21,7 +21,7 @@ export const INSTALLATION_SERVICES: InstallationService[] = [
       'SANS 10142-1 Certificate of Compliance (CoC)'
     ],
     complianceStandards: ['SANS 10142-1 Wiring Code', 'SANS 10400-O Environmental Hygiene', 'OHSAct General Machinery Regulations'],
-    image: 'https://images.unsplash.com/photo-1541888946425-d0fbb186c5f7?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/installation-service.jpg',
   },
   {
     id: 'srv-industrial',
@@ -43,7 +43,7 @@ export const INSTALLATION_SERVICES: InstallationService[] = [
       'Vibration, amperage, and airflow anemometer verification sign-off'
     ],
     complianceStandards: ['OHSAct 85 of 1993', 'SANS 10142-1', 'ISO 5801 Aerodynamic Test Standards'],
-    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/market-industrial.jpg',
   },
   {
     id: 'srv-institutional',
@@ -65,7 +65,7 @@ export const INSTALLATION_SERVICES: InstallationService[] = [
       'Facility maintenance team handover and operational training'
     ],
     complianceStandards: ['SANS 10400-O', 'DBE Minimum Uniform Norms & Standards for Public School Infrastructure', 'SANS 10142-1'],
-    image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/ind-education.png',
   },
   {
     id: 'srv-hvls',
@@ -87,7 +87,7 @@ export const INSTALLATION_SERVICES: InstallationService[] = [
       'Fire alarm interlocking (automatic shutdown upon smoke detector signal)'
     ],
     complianceStandards: ['AMCA 230-15', 'SANS 10160 Basis of Structural Design and Actions', 'SANS 10142-1'],
-    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/after-ventaxis-airflow.png',
   },
   {
     id: 'srv-mechanical-ventilation',
@@ -109,7 +109,7 @@ export const INSTALLATION_SERVICES: InstallationService[] = [
       'Comprehensive As-Built CAD layout drawings'
     ],
     complianceStandards: ['SANS 10400-O', 'ASHRAE 62.1 Ventilation for Acceptable Indoor Air Quality', 'SANS 10142-1'],
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/prod-inline-315.png',
   },
   {
     id: 'srv-extraction',
@@ -131,7 +131,7 @@ export const INSTALLATION_SERVICES: InstallationService[] = [
       'Environmental and occupational hygiene sign-off support'
     ],
     complianceStandards: ['EN 12101-3 Smoke Control', 'SANS 10400-T Fire Protection', 'OHSAct Hazardous Chemical Substances'],
-    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/prod-smoke-400.png',
   },
   {
     id: 'srv-upgrades',
@@ -153,7 +153,7 @@ export const INSTALLATION_SERVICES: InstallationService[] = [
       'Post-installation verification showing exact kWh savings and CFM increases'
     ],
     complianceStandards: ['SANS 10142-1', 'SANS 941 Energy Efficiency of Electrical Apparatus'],
-    image: 'https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/product-commercial-ceiling.jpg',
   },
   {
     id: 'srv-electrical-mech-coordination',
@@ -175,7 +175,7 @@ export const INSTALLATION_SERVICES: InstallationService[] = [
       'Official Department of Employment and Labour SANS 10142-1 CoC issued'
     ],
     complianceStandards: ['SANS 10142-1 The Wiring of Premises', 'OHSAct Electrical Installation Regulations'],
-    image: 'https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/prod-centri-500.png',
   },
   {
     id: 'srv-maintenance',
@@ -197,7 +197,7 @@ export const INSTALLATION_SERVICES: InstallationService[] = [
       'Transparent preventative replacement recommendations before critical failure'
     ],
     complianceStandards: ['OHSAct General Safety Regulations', 'ISO 10816 Mechanical Vibration Evaluation'],
-    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/prod-roof-800.png',
   }
 ];
 

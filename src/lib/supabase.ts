@@ -239,12 +239,15 @@ const INITIAL_DEMO_CONTRACTS: MaintenanceContract[] = [
   }
 ];
 
-// Helper to seed localStorage
+// Helper to seed localStorage safely in SSR + Client environments
 function getLocalItem<T>(key: string, defaultVal: T): T {
+  if (typeof window === 'undefined') {
+    return defaultVal;
+  }
   try {
-    const val = localStorage.getItem(key);
+    const val = window.localStorage.getItem(key);
     if (!val) {
-      localStorage.setItem(key, JSON.stringify(defaultVal));
+      window.localStorage.setItem(key, JSON.stringify(defaultVal));
       return defaultVal;
     }
     return JSON.parse(val);
@@ -254,8 +257,9 @@ function getLocalItem<T>(key: string, defaultVal: T): T {
 }
 
 function setLocalItem<T>(key: string, val: T): void {
+  if (typeof window === 'undefined') return;
   try {
-    localStorage.setItem(key, JSON.stringify(val));
+    window.localStorage.setItem(key, JSON.stringify(val));
   } catch (e) {
     console.error('Failed to store to localStorage', e);
   }

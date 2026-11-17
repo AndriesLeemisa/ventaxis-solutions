@@ -28,7 +28,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       {/* Background Cinematic Industrial Image with High-Grade Engineering Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=2000&q=85"
+          src="/images/market-industrial.jpg"
           alt="Commercial and industrial facility with high-volume low-speed ventilation ceiling fan"
           className="w-full h-full object-cover object-center scale-105 transition-transform duration-1000 ease-out brightness-[0.42] contrast-[1.12]"
         />

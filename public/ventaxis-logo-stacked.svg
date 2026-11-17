@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" fill="none">
+  <defs>
+    <linearGradient id="vGradS" x1="88" y1="16" x2="114" y2="76" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1479D4" />
+      <stop offset="100%" stop-color="#10243A" />
+    </linearGradient>
+    <linearGradient id="flowGradS1" x1="114" y1="76" x2="146" y2="16" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1479D4" />
+      <stop offset="100%" stop-color="#20B8CE" />
+    </linearGradient>
+    <linearGradient id="flowGradS2" x1="120" y1="76" x2="152" y2="26" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#20B8CE" />
+      <stop offset="100%" stop-color="#38E1F8" />
+    </linearGradient>
+  </defs>
+
+  <!-- Geometric V Mark Centered -->
+  <g transform="translate(40, 10)">
+    <path d="M14 14L36 66H46L24 14H14Z" fill="url(#vGradS)" />
+    <path d="M40 66L62 14H55L34 60L40 66Z" fill="url(#flowGradS1)" />
+    <path d="M47 55L70 14H64L43 49L47 55Z" fill="url(#flowGradS2)" />
+    <path d="M54 43L75 14H70L50 37L54 43Z" fill="#20B8CE" opacity="0.85" />
+  </g>
+
+  <!-- Typography Centered -->
+  <text x="120" y="112" font-family="'Manrope', -apple-system, sans-serif" font-weight="800" font-size="24" fill="#10243A" text-anchor="middle" letter-spacing="-0.5">VENT<tspan fill="#1479D4">AXIS</tspan></text>
+  <text x="120" y="132" font-family="'Manrope', -apple-system, sans-serif" font-weight="600" font-size="12" fill="#6B7A8A" text-anchor="middle" letter-spacing="4">SOLUTIONS</text>
+  <text x="120" y="152" font-family="'Inter', -apple-system, sans-serif" font-weight="600" font-size="9" fill="#1479D4" text-anchor="middle" letter-spacing="1.5">ENGINEERING BETTER AIRFLOW</text>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="vGrad" x1="8" y1="12" x2="32" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1479D4" />
+      <stop offset="100%" stop-color="#10243A" />
+    </linearGradient>
+    <linearGradient id="flowGrad1" x1="28" y1="56" x2="56" y2="12" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1479D4" />
+      <stop offset="100%" stop-color="#20B8CE" />
+    </linearGradient>
+    <linearGradient id="flowGrad2" x1="32" y1="56" x2="60" y2="20" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#20B8CE" />
+      <stop offset="100%" stop-color="#38E1F8" />
+    </linearGradient>
+  </defs>
+  <!-- Background Badge (optional rounded dark square for favicon visibility) -->
+  <rect width="64" height="64" rx="14" fill="#10243A" />
+  
+  <!-- Geometric V Left Structural Arm -->
+  <path d="M12 14L28 52H36L20 14H12Z" fill="url(#vGrad)" />
+  
+  <!-- Aerodynamic Airflow Streamline 1 (Core blade) -->
+  <path d="M30 52L48 14H42L26 48L30 52Z" fill="url(#flowGrad1)" />
+  
+  <!-- Aerodynamic Airflow Streamline 2 (Outer air vortex) -->
+  <path d="M36 44L54 14H49L33 40L36 44Z" fill="url(#flowGrad2)" />
+  
+  <!-- Aerodynamic Airflow Streamline 3 (High-speed tip) -->
+  <path d="M42 34L58 14H54L39 30L42 34Z" fill="#20B8CE" opacity="0.85" />
+</svg>

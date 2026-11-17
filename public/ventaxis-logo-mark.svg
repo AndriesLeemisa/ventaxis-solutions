@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+  <defs>
+    <linearGradient id="vGradM" x1="10" y1="14" x2="36" y2="66" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1479D4" />
+      <stop offset="100%" stop-color="#10243A" />
+    </linearGradient>
+    <linearGradient id="flowGradM1" x1="36" y1="66" x2="68" y2="14" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1479D4" />
+      <stop offset="100%" stop-color="#20B8CE" />
+    </linearGradient>
+    <linearGradient id="flowGradM2" x1="42" y1="66" x2="74" y2="24" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#20B8CE" />
+      <stop offset="100%" stop-color="#38E1F8" />
+    </linearGradient>
+  </defs>
+
+  <!-- Geometric V Left Structural Arm -->
+  <path d="M14 14L36 66H46L24 14H14Z" fill="url(#vGradM)" />
+
+  <!-- Laminar Airflow Streamline 1 -->
+  <path d="M40 66L62 14H55L34 60L40 66Z" fill="url(#flowGradM1)" />
+
+  <!-- Laminar Airflow Streamline 2 -->
+  <path d="M47 55L70 14H64L43 49L47 55Z" fill="url(#flowGradM2)" />
+
+  <!-- Laminar Airflow Streamline 3 -->
+  <path d="M54 43L75 14H70L50 37L54 43Z" fill="#20B8CE" opacity="0.85" />
+</svg>

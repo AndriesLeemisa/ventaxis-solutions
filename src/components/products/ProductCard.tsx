@@ -14,7 +14,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   onRequestQuote,
 }) => {
   return (
-    <div className="group bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between hover:border-[#1479D4]/40">
+    <div
+      id={product.id}
+      className="group bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between hover:border-[#1479D4]/40 scroll-mt-28"
+    >
       {/* Top Image Container with Badges */}
       <div>
         <div className="relative h-56 w-full overflow-hidden bg-gray-100">

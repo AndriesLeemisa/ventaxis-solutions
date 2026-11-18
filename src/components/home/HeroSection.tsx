@@ -5,14 +5,8 @@ import {
   CheckCircle2,
   ChevronLeft,
   ChevronRight,
-  Wind,
   Eye,
-  ArrowDown,
-  Sparkles,
-  Volume2,
-  Gauge,
-  ShieldCheck,
-  Maximize2
+  ArrowDown
 } from 'lucide-react';
 
 export interface CinematicSlide {
@@ -137,7 +131,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   const headlineRef = useRef<HTMLHeadingElement>(null);
   const subtextRef = useRef<HTMLParagraphElement>(null);
   const categoryBadgeRef = useRef<HTMLDivElement>(null);
-  const hudCardRef = useRef<HTMLDivElement>(null);
   const ctasRef = useRef<HTMLDivElement>(null);
   const progressBarRef = useRef<HTMLDivElement>(null);
 
@@ -221,25 +214,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         );
       }
 
-      // 5. Floating cinematic HUD Card
-      if (hudCardRef.current) {
-        gsap.fromTo(
-          hudCardRef.current,
-          { x: 40, opacity: 0, scale: 0.95 },
-          { x: 0, opacity: 1, scale: 1, duration: 0.85, delay: 0.25, ease: 'power3.out' }
-        );
-      }
-
-      // 6. Action buttons
+      // 5. Action buttons
       if (ctasRef.current) {
         gsap.fromTo(
           ctasRef.current,
           { y: 20, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.7, delay: 0.35, ease: 'power3.out' }
+          { y: 0, opacity: 1, duration: 0.7, delay: 0.25, ease: 'power3.out' }
         );
       }
 
-      // 7. Linear countdown progress bar
+      // 6. Linear countdown progress bar
       if (progressBarRef.current) {
         gsap.fromTo(
           progressBarRef.current,
@@ -326,10 +310,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         </div>
       </div>
 
-      {/* 3. MAIN CINEMATIC HERO COMPOSITION: Huge Headline + Floating Glassmorphic HUD */}
-      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-14 my-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-        {/* Left Column: Grand Editorial Headline & Copy (7 cols) */}
-        <div className="lg:col-span-7 space-y-6 sm:space-y-8">
+      {/* 3. MAIN CINEMATIC HERO COMPOSITION: Huge Headline + Direct CTA */}
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-16 my-auto w-full">
+        <div className="max-w-3xl lg:max-w-4xl space-y-6 sm:space-y-8">
           {/* Main Huge Headline — Commanding Font Size */}
           <h1
             ref={headlineRef}
@@ -384,54 +367,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-[#20B8CE] shrink-0" />
               <span>Gauteng Deployment</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Right Column: Floating Cinematic Glassmorphic HUD Badge (5 cols) */}
-        <div
-          ref={hudCardRef}
-          className="lg:col-span-5 flex justify-center lg:justify-end"
-        >
-          <div
-            onClick={() => handleNavigateToProduct(currentSlide.productId)}
-            className="w-full max-w-md bg-black/60 hover:bg-black/80 backdrop-blur-xl p-6 rounded-3xl border border-white/20 hover:border-[#20B8CE] shadow-2xl transition-all duration-300 cursor-pointer group space-y-4"
-            title={`Click to inspect ${currentSlide.categoryName} specifications`}
-          >
-            {/* Top row with live status */}
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <Wind className="w-4 h-4 text-[#20B8CE]" />
-                <span className="text-xs font-mono font-bold uppercase tracking-wider text-gray-300">
-                  Performance Specification
-                </span>
-              </div>
-              <span className="px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
-                Verified
-              </span>
-            </div>
-
-            {/* Key Metrics Highlight */}
-            <div className="space-y-1">
-              <div className="font-['Manrope'] text-2xl sm:text-3xl font-black text-white group-hover:text-[#20B8CE] transition-colors">
-                {currentSlide.keyMetric}
-              </div>
-              <div className="text-sm font-semibold text-gray-300">
-                {currentSlide.secondaryMetric}
-              </div>
-            </div>
-
-            {/* Spec Details */}
-            <p className="text-xs text-gray-400 leading-relaxed border-t border-white/10 pt-3">
-              {currentSlide.specPill}
-            </p>
-
-            {/* Interactive footer bar on HUD */}
-            <div className="pt-2 flex items-center justify-between text-xs font-['Manrope'] font-bold text-[#20B8CE] group-hover:text-white transition-colors">
-              <span>View equipment details & CAD</span>
-              <div className="w-7 h-7 rounded-full bg-[#1479D4]/40 flex items-center justify-center group-hover:bg-[#20B8CE] group-hover:text-[#070E18] transition-colors">
-                <ArrowDown className="w-4 h-4" />
-              </div>
             </div>
           </div>
         </div>

@@ -12,9 +12,9 @@ export const PRODUCTS: Product[] = [
     tagline: 'Massive, gentle airflow for warehouses, factories, and large open buildings.',
     description: 'Designed for large industrial facilities, the 7.3m AeroVortex moves massive amounts of air slowly and quietly. It creates a cooling breeze across areas up to 1,800 m², making the room feel up to 6°C cooler while running on an ultra-efficient direct-drive motor.',
     images: [
-      '/images/market-industrial.jpg',
-      '/images/product-commercial-ceiling.jpg',
-      '/images/after-ventaxis-airflow.png'
+      '/images/market-industrial.webp',
+      '/images/product-commercial-ceiling.webp',
+      '/images/product-industrial-floor.webp'
     ],
     manufacturer: 'VentAxis Engineering Systems',
     model: 'VAX-HVLS-7300-PMSM',
@@ -64,8 +64,8 @@ export const PRODUCTS: Product[] = [
     tagline: 'Silent, high-capacity cooling for schools, fitness centres, and church halls.',
     description: 'A whisper-quiet 4.9m ceiling fan tailored for spaces where people gather. It delivers continuous, gentle air circulation across up to 850 m² without distracting motor noise or paper-scattering drafts.',
     images: [
-      '/images/market-commercial.jpg',
-      '/images/product-commercial-ceiling.jpg'
+      '/images/market-commercial.webp',
+      '/images/product-commercial-ceiling.webp'
     ],
     manufacturer: 'VentAxis Engineering Systems',
     model: 'VAX-HVLS-4900-COMM',
@@ -115,8 +115,8 @@ export const PRODUCTS: Product[] = [
     tagline: 'Durable, energy-efficient cooling for classrooms, offices, and retail.',
     description: 'Built for reliable everyday cooling in public and commercial buildings. Heavy-gauge aluminium blades deliver strong, steady airflow with very low energy consumption and zero maintenance.',
     images: [
-      '/images/product-commercial-ceiling.jpg',
-      '/images/product-ceiling-charcoal.jpg'
+      '/images/product-commercial-ceiling.webp',
+      '/images/product-ceiling-charcoal.webp'
     ],
     manufacturer: 'VentAxis Commercial Systems',
     model: 'VAX-AG-1400-WHT',
@@ -166,8 +166,8 @@ export const PRODUCTS: Product[] = [
     tagline: 'Handcrafted solid timber blades with whisper-quiet DC motor for premium homes.',
     description: 'Add warmth and natural beauty to your living room, bedroom, or boutique lodge. The Artesian features three carved walnut blades driven by an ultra-efficient, completely silent DC motor with a 6-speed remote control.',
     images: [
-      '/images/product-wooden-fan.jpg',
-      '/images/hero-living-fan.jpg'
+      '/images/product-wooden-fan.webp',
+      '/images/hero-living-fan.webp'
     ],
     manufacturer: 'VentAxis Residential Craft',
     model: 'VAX-ART-1320-WALNUT',
@@ -214,8 +214,8 @@ export const PRODUCTS: Product[] = [
     tagline: 'Architectural modern ceiling fan with integrated dimmable warm LED light.',
     description: 'A clean, contemporary fan designed for modern open-plan homes and hospitality dining areas. It combines sculpted aerodynamic blades for cooling with a warm, dimmable LED luminaire controlled via remote.',
     images: [
-      '/images/product-designer-light.jpg',
-      '/images/product-ceiling-charcoal.jpg'
+      '/images/product-designer-light.webp',
+      '/images/product-ceiling-charcoal.webp'
     ],
     manufacturer: 'VentAxis Architectural Series',
     model: 'VAX-LUM-1370-MATTE',
@@ -262,8 +262,8 @@ export const PRODUCTS: Product[] = [
     tagline: 'Wet-rated outdoor cooling for covered patios, braai areas, and verandas.',
     description: 'Engineered specifically for outdoor South African conditions. Built with UV-stabilized composite blades and a sealed motor to resist moisture, humidity, and coastal sea spray without sagging, rust, or motor wear.',
     images: [
-      '/images/product-outdoor-fan.jpg',
-      '/images/market-residential.jpg'
+      '/images/product-outdoor-fan.webp',
+      '/images/market-residential.webp'
     ],
     manufacturer: 'VentAxis Outdoor Living',
     model: 'VAX-MONS-1420-PATIO',
@@ -314,8 +314,8 @@ export const PRODUCTS: Product[] = [
     tagline: 'High-velocity oscillating wall fan for workshops, garages, and gyms.',
     description: 'Frees up valuable floor space while delivering strong, directional cooling. Features heavy-duty cast-iron wall mounting brackets, a 3-speed copper motor, and a 90-degree oscillating sweep to cool busy work areas.',
     images: [
-      '/images/product-industrial-wall.jpg',
-      '/images/market-industrial.jpg'
+      '/images/product-industrial-wall.webp',
+      '/images/market-industrial.webp'
     ],
     manufacturer: 'VentAxis Heavy Industrial',
     model: 'VAX-SB-750-W',
@@ -363,8 +363,8 @@ export const PRODUCTS: Product[] = [
     tagline: 'Portable, high-power cooling with a tip-resistant cast-iron base.',
     description: 'Move cooling right where heat gathers. Built with a solid cast-iron base that will not tip over, height adjustment up to 1.8m, and a powerful 750mm blade set that pushes air across 15+ metres.',
     images: [
-      '/images/prod-pedestal-750.png',
-      '/images/product-industrial-floor.jpg'
+      '/images/prod-pedestal-750.webp',
+      '/images/product-industrial-floor.webp'
     ],
     manufacturer: 'VentAxis Heavy Industrial',
     model: 'VAX-SB-750-P',
@@ -416,8 +416,8 @@ export const PRODUCTS: Product[] = [
     tagline: 'Tiltable barrel fan on wheels for instant floor-level cooling.',
     description: 'A rugged, rollable drum fan designed to clear hot air pockets and keep workers cool in heavy heat zones. Features a 360-degree tilt barrel, sturdy rubber wheels, and a protective safety grille.',
     images: [
-      '/images/product-industrial-floor.jpg',
-      '/images/market-industrial.jpg'
+      '/images/product-industrial-floor.webp',
+      '/images/market-industrial.webp'
     ],
     manufacturer: 'VentAxis Heavy Industrial',
     model: 'VAX-WB-900-M',
@@ -465,8 +465,8 @@ export const PRODUCTS: Product[] = [
     tagline: 'High-thrust mobile air cannon projecting cooling air over 25 metres.',
     description: 'When extreme heat threatens worker comfort on factory floors, the RollStorm delivers. Its aerodynamic barrel accelerates high-velocity airflow across long distances to create an instant cooling zone.',
     images: [
-      '/images/prod-mobile-1100.png',
-      '/images/market-industrial.jpg'
+      '/images/prod-mobile-1100.webp',
+      '/images/market-industrial.webp'
     ],
     manufacturer: 'VentAxis Heavy Industrial',
     model: 'VAX-RS-1100-PRO',
@@ -518,8 +518,8 @@ export const PRODUCTS: Product[] = [
     tagline: 'Fresh, 100% chilled air using natural water evaporation and minimal electricity.',
     description: 'The smart, low-cost way to cool large open buildings where air conditioning is too expensive. Delivers 18,000 m³/h of cool, fresh air by evaporating water through dense cellulose pads, cutting power bills by up to 80%.',
     images: [
-      '/images/prod-evap-18000.png',
-      '/images/market-commercial.jpg'
+      '/images/prod-evap-18000.webp',
+      '/images/market-commercial.webp'
     ],
     manufacturer: 'VentAxis Evaporative Division',
     model: 'VAX-EVAP-18000-IND',

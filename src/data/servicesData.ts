@@ -21,7 +21,7 @@ export const INSTALLATION_SERVICES: InstallationService[] = [
       'SANS 10142-1 Electrical Certificate of Compliance (CoC)'
     ],
     complianceStandards: ['SANS 10142-1 Wiring Code', 'OHSAct Safety Regulations'],
-    image: '/images/hero-living-fan.jpg',
+    image: '/images/hero-living-fan.webp',
   },
   {
     id: 'srv-commercial',
@@ -43,7 +43,7 @@ export const INSTALLATION_SERVICES: InstallationService[] = [
       'Official SANS 10142-1 Certificate of Compliance sign-off'
     ],
     complianceStandards: ['SANS 10142-1 Wiring Code', 'SANS 10400-O Indoor Ventilation Norms'],
-    image: '/images/market-commercial.jpg',
+    image: '/images/market-commercial.webp',
   },
   {
     id: 'srv-hvls',
@@ -65,7 +65,7 @@ export const INSTALLATION_SERVICES: InstallationService[] = [
       'Turnkey electrical connection and commissioning sign-off'
     ],
     complianceStandards: ['AMCA 230-15 HVLS Standards', 'SANS 10142-1 Electrical Code', 'OHSAct Safe Rigging'],
-    image: '/images/after-ventaxis-airflow.png',
+    image: '/images/product-commercial-ceiling.webp',
   },
   {
     id: 'srv-wall-pedestal',
@@ -87,7 +87,7 @@ export const INSTALLATION_SERVICES: InstallationService[] = [
       'Full electrical circuit testing and sign-off'
     ],
     complianceStandards: ['SANS 10142-1 Electrical Code', 'OHSAct General Machinery Regulations'],
-    image: '/images/product-industrial-wall.jpg',
+    image: '/images/product-industrial-wall.webp',
   },
   {
     id: 'srv-upgrades',
@@ -109,7 +109,7 @@ export const INSTALLATION_SERVICES: InstallationService[] = [
       'Warranty handover and SANS compliance check'
     ],
     complianceStandards: ['SANS 10142-1 Certified', 'SANS 941 Energy Efficiency Standards'],
-    image: '/images/product-commercial-ceiling.jpg',
+    image: '/images/product-commercial-ceiling.webp',
   }
 ];
 

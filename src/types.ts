@@ -173,7 +173,7 @@ export interface PortfolioProject {
   recommendedEquipment: string[];
   installationDescription: string;
   results: string[];
-  completionStatus: 'Completed & Certified' | 'Commissioning in Progress' | 'Demonstration Benchmark';
+  completionStatus: 'Completed & Certified' | 'Commissioning in Progress' | 'Demonstration Benchmark' | 'Demonstration Engineering Benchmark';
   isDemonstrationContent: boolean;
   image: string;
 }

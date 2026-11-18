@@ -7,8 +7,8 @@ import { CanonicalCompanyDetails } from './types';
 export const COMPANY_DETAILS: CanonicalCompanyDetails = {
   brandName: 'VENTAXIS SOLUTIONS',
   legalEntity: 'VentAxis Solutions (Pty) Ltd',
-  registrationNumber: 'Reg: 2026 / 148920 / 07',
-  vatNumber: 'VAT No: 4920281902',
+  registrationNumber: '2024 / 489210 / 07',
+  vatNumber: '4920281902',
   tagline: 'Engineering Better Airflow.',
   coreProposition:
     'Turnkey commercial and industrial fan supply, structural rigging, SANS 10142-1 electrical integration, and preventative maintenance across Gauteng and South Africa.',

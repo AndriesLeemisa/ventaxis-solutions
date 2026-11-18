@@ -18,7 +18,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       {/* Sunlit Architectural Background — Bright, Natural, No Dark Blur */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/hero-living-fan.jpg"
+          src="/images/hero-living-fan.webp"
           alt="Sunlit architectural space with premium ceiling fan"
           className="w-full h-full object-cover object-center"
         />

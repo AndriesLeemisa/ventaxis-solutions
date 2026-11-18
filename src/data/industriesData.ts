@@ -23,7 +23,7 @@ export const INDUSTRIES: Industry[] = [
       'Monsoon 1420mm All-Weather Patio Fan'
     ],
     standardsHighlight: 'SANS 10142-1 certified electrical installation with neat concealed wiring and zero ceiling damage.',
-    image: '/images/hero-living-fan.jpg',
+    image: '/images/hero-living-fan.webp',
     iconName: 'Building2'
   },
   {
@@ -48,7 +48,7 @@ export const INDUSTRIES: Industry[] = [
       'StormBreeze 750mm Wall-Mounted Fan'
     ],
     standardsHighlight: 'Meets Department of Basic Education (DBE) infrastructure norms and SANS 10400-O standards.',
-    image: '/images/ind-education.png',
+    image: '/images/ind-education.webp',
     iconName: 'GraduationCap'
   },
   {
@@ -73,7 +73,7 @@ export const INDUSTRIES: Industry[] = [
       'StormBreeze 750mm Oscillating Wall Fans'
     ],
     standardsHighlight: 'Acoustically verified under 36 dB(A) to ensure zero interference with church audio recording.',
-    image: '/images/ind-religious.png',
+    image: '/images/ind-religious.webp',
     iconName: 'Church'
   },
   {
@@ -98,7 +98,7 @@ export const INDUSTRIES: Industry[] = [
       'Lumina 1370mm Designer Ceiling Fan'
     ],
     standardsHighlight: 'Complies with SANS 10400-XA Energy Usage in Buildings and SANS 10142-1 Wiring Code.',
-    image: '/images/market-commercial.jpg',
+    image: '/images/market-commercial.webp',
     iconName: 'Building2'
   },
   {
@@ -124,7 +124,7 @@ export const INDUSTRIES: Industry[] = [
       'AquaBreeze 18,000 Evaporative Air Cooler'
     ],
     standardsHighlight: 'Fully compliant with OHSAct Environmental Regulations for Workplaces (Thermal Conditions).',
-    image: '/images/market-industrial.jpg',
+    image: '/images/market-industrial.webp',
     iconName: 'Factory'
   },
   {
@@ -149,7 +149,7 @@ export const INDUSTRIES: Industry[] = [
       'AquaBreeze 18,000 Evaporative Air Cooler'
     ],
     standardsHighlight: 'Wet-rated IP55 certification ensuring safe operation in high-humidity and outdoor rain-sheltered areas.',
-    image: '/images/market-hospitality.jpg',
+    image: '/images/market-hospitality.webp',
     iconName: 'UtensilsCrossed'
   }
 ];

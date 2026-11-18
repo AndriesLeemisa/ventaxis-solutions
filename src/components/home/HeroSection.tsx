@@ -12,7 +12,8 @@ import {
   Wrench,
   Sun,
   Eye,
-  ArrowDown
+  ArrowDown,
+  Sparkles
 } from 'lucide-react';
 
 export interface FanSlide {
@@ -34,11 +35,11 @@ const FAN_SLIDES: FanSlide[] = [
   {
     id: 'residential',
     productId: 'prod-wood-ceiling-1320',
-    categoryName: 'Residential & Designer Ceiling Fans',
+    categoryName: 'Residential Timber Ceiling Fans',
     shortLabel: 'Living & Bedroom',
     heroHeadline: 'Handcrafted Timber.',
     accentWord: 'Silent Living.',
-    tagline: 'Solid carved walnut blades and ultra-efficient DC motors designed for whisper-quiet bedrooms and elegant open living spaces.',
+    tagline: 'Solid carved walnut blades with ultra-quiet DC motors designed for whisper-quiet bedrooms and elegant open living spaces.',
     image: '/images/hero-living-fan.webp',
     thumbnail: '/images/product-wooden-fan.webp',
     bestFor: 'Homes, Master Bedrooms & Luxury Lodges',
@@ -120,13 +121,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   const [isPaused, setIsPaused] = useState(false);
 
   const containerRef = useRef<HTMLDivElement>(null);
-  const bgImageRef = useRef<HTMLImageElement>(null);
-  const unifiedContentRef = useRef<HTMLDivElement>(null);
+  const mainImageRef = useRef<HTMLImageElement>(null);
+  const imageWrapperRef = useRef<HTMLDivElement>(null);
   const headlineRef = useRef<HTMLHeadingElement>(null);
   const subtextRef = useRef<HTMLParagraphElement>(null);
-  const pillRef = useRef<HTMLDivElement>(null);
+  const badgeRef = useRef<HTMLDivElement>(null);
   const progressBarRef = useRef<HTMLDivElement>(null);
-  const clickPromptRef = useRef<HTMLDivElement>(null);
 
   const currentFan = FAN_SLIDES[currentIndex];
 
@@ -164,20 +164,28 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   // GSAP Animations on unified hero slide change
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // 1. Full-bleed background crossfade & subtle cinematic push-in
-      if (bgImageRef.current) {
+      // 1. Prominent Fan Image Animation (Visible slide and scale reveal)
+      if (mainImageRef.current) {
         gsap.fromTo(
-          bgImageRef.current,
-          { opacity: 0.65, scale: 1.05 },
-          { opacity: 1, scale: 1.0, duration: 1.1, ease: 'power2.out' }
+          mainImageRef.current,
+          { opacity: 0.3, scale: 0.94, y: 16 },
+          { opacity: 1, scale: 1, y: 0, duration: 0.85, ease: 'power3.out' }
         );
       }
 
-      // 2. Unified headline animation
+      if (imageWrapperRef.current) {
+        gsap.fromTo(
+          imageWrapperRef.current,
+          { borderColor: 'rgba(20, 121, 212, 0.4)' },
+          { borderColor: 'rgba(229, 231, 235, 1)', duration: 1.2, ease: 'power2.out' }
+        );
+      }
+
+      // 2. Headline animation
       if (headlineRef.current) {
         gsap.fromTo(
           headlineRef.current,
-          { y: 32, opacity: 0 },
+          { y: 28, opacity: 0 },
           { y: 0, opacity: 1, duration: 0.7, ease: 'power3.out' }
         );
       }
@@ -186,25 +194,17 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       if (subtextRef.current) {
         gsap.fromTo(
           subtextRef.current,
-          { y: 22, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.7, delay: 0.12, ease: 'power3.out' }
+          { y: 18, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.7, delay: 0.1, ease: 'power3.out' }
         );
       }
 
-      // 4. Spec pill & interactive prompt
-      if (pillRef.current) {
+      // 4. Badge animation
+      if (badgeRef.current) {
         gsap.fromTo(
-          pillRef.current,
-          { scale: 0.95, opacity: 0 },
-          { scale: 1, opacity: 1, duration: 0.5, delay: 0.2, ease: 'back.out(1.5)' }
-        );
-      }
-
-      if (clickPromptRef.current) {
-        gsap.fromTo(
-          clickPromptRef.current,
-          { y: 15, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.6, delay: 0.3, ease: 'power2.out' }
+          badgeRef.current,
+          { scale: 0.92, opacity: 0 },
+          { scale: 1, opacity: 1, duration: 0.5, delay: 0.15, ease: 'back.out(1.5)' }
         );
       }
 
@@ -234,76 +234,52 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       ref={containerRef}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
-      className="relative min-h-[85vh] lg:min-h-[92vh] flex flex-col justify-between bg-[#10243A] overflow-hidden text-[#10243A] select-none"
+      className="relative min-h-[85vh] lg:min-h-[92vh] flex flex-col justify-between bg-[#FAF8F5] overflow-hidden text-[#10243A] select-none border-b border-gray-200"
     >
-      {/* 90% VISUAL IMAGE STAGE — Full-bleed, Clickable to navigate to product below */}
-      <div
-        onClick={() => handleNavigateToProduct(currentFan.productId)}
-        className="absolute inset-0 z-0 cursor-pointer group"
-        title={`Click to view ${currentFan.categoryName} details below`}
-      >
-        <img
-          ref={bgImageRef}
-          src={currentFan.image}
-          alt={currentFan.categoryName}
-          className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.02]"
-        />
-
-        {/* Seamless, unified editorial wash (Warm natural light from left, crystal clear view on right) */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-transparent sm:via-white/75 sm:to-white/10"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-white/60 via-transparent to-white/30"></div>
-
-        {/* Floating "Click to inspect this fan" visual badge on the image */}
-        <div
-          ref={clickPromptRef}
-          className="absolute top-20 right-6 sm:top-24 sm:right-10 hidden sm:flex items-center gap-2 bg-[#10243A]/85 hover:bg-[#1479D4] backdrop-blur-md text-white text-xs sm:text-sm font-['Manrope'] font-bold px-4 py-2.5 rounded-full shadow-xl transition-all duration-300 border border-white/20 group-hover:scale-105"
-        >
-          <Eye className="w-4 h-4 text-[#20B8CE]" />
-          <span>Click image to view specifications below</span>
-          <ArrowDown className="w-4 h-4 animate-bounce" />
-        </div>
+      {/* Subtle ambient architectural background texture */}
+      <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
+        <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-[#1479D4]/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-10 w-[500px] h-[500px] bg-amber-500/10 rounded-full blur-3xl"></div>
       </div>
 
-      {/* TOP NOTCH: Category Badge & Slide Progress */}
+      {/* TOP NOTCH: Live Category Badge & Slide Progress */}
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 pt-6 sm:pt-8 w-full">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <button
             onClick={() => handleNavigateToProduct(currentFan.productId)}
-            className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/95 backdrop-blur-md border border-gray-200 shadow-sm text-[#10243A] hover:border-[#1479D4] transition-all cursor-pointer"
+            className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white backdrop-blur-md border border-gray-200 shadow-sm text-[#10243A] hover:border-[#1479D4] hover:shadow-md transition-all cursor-pointer"
           >
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
             <span className="text-xs sm:text-sm font-['Manrope'] font-extrabold uppercase tracking-wider text-[#1479D4]">
               {currentFan.categoryName}
             </span>
-            <span className="text-xs text-gray-400">• Click to view</span>
+            <span className="text-xs text-gray-400 font-semibold">• Click to view specs</span>
           </button>
 
-          <div className="hidden md:flex items-center gap-3 text-xs sm:text-sm font-['Manrope'] font-bold text-gray-700 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full border border-gray-200 shadow-xs">
+          <div className="hidden md:flex items-center gap-3 text-xs sm:text-sm font-['Manrope'] font-bold text-gray-700 bg-white px-4 py-2 rounded-full border border-gray-200 shadow-xs">
             <span className="text-[#10243A]">Fan {currentIndex + 1} of {FAN_SLIDES.length}</span>
             <span className="text-gray-300">•</span>
             <span className="text-emerald-700 font-semibold">{currentFan.bestFor}</span>
           </div>
         </div>
 
-        {/* Progress bar line */}
-        <div className="w-full bg-gray-300/60 h-1 rounded-full mt-3 overflow-hidden">
+        {/* Linear progress bar */}
+        <div className="w-full bg-gray-200 h-1.5 rounded-full mt-3 overflow-hidden">
           <div ref={progressBarRef} className="bg-[#1479D4] h-full"></div>
         </div>
       </div>
 
-      {/* MAIN UNIFIED CONTENT: High-Impact Editorial Layout (One Seamless Experience) */}
-      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-14 my-auto w-full">
-        <div
-          ref={unifiedContentRef}
-          className="max-w-3xl space-y-6 sm:space-y-7"
-        >
+      {/* MAIN UNIFIED HERO STAGE: 90% Visual Portrayal & Large Editorial Typography */}
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-10 my-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        {/* Left Column: Bold Typography & Action Controls (6 cols) */}
+        <div className="lg:col-span-6 space-y-6 sm:space-y-7">
           {/* Main Huge Headline — Increased Font Size */}
           <h1
             ref={headlineRef}
-            className="font-['Manrope'] text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-[#10243A] leading-[1.04]"
+            className="font-['Manrope'] text-4xl sm:text-6xl md:text-7xl font-black tracking-tight text-[#10243A] leading-[1.05]"
           >
             {currentFan.heroHeadline}{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1479D4] to-[#20B8CE] block sm:inline">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1479D4] to-[#20B8CE] block">
               {currentFan.accentWord}
             </span>
           </h1>
@@ -311,42 +287,36 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           {/* Subheading with Increased Font Size */}
           <p
             ref={subtextRef}
-            className="font-['Inter'] text-lg sm:text-2xl md:text-2xl text-gray-800 leading-relaxed font-normal max-w-2xl"
+            className="font-['Inter'] text-lg sm:text-xl md:text-2xl text-gray-700 leading-relaxed font-normal"
           >
             {currentFan.tagline}
           </p>
 
-          {/* Integrated Live Spec Pill */}
+          {/* Key Spec Badge */}
           <div
-            ref={pillRef}
+            ref={badgeRef}
             onClick={() => handleNavigateToProduct(currentFan.productId)}
-            className="inline-flex flex-wrap items-center gap-2.5 p-2 pr-4 bg-white/95 backdrop-blur-md rounded-2xl border border-gray-200 shadow-md cursor-pointer hover:border-[#1479D4] transition-all group"
+            className="p-4 bg-white rounded-2xl border border-gray-200 shadow-sm hover:border-[#1479D4] hover:shadow-md transition-all cursor-pointer group"
           >
-            <div className="w-10 h-10 rounded-xl overflow-hidden shrink-0 border border-gray-200 bg-gray-100">
-              <img
-                src={currentFan.thumbnail}
-                alt={currentFan.shortLabel}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-              />
+            <div className="flex items-center justify-between gap-2 mb-1.5">
+              <span className="font-['Manrope'] text-lg sm:text-xl font-black text-[#10243A] group-hover:text-[#1479D4] transition-colors">
+                {currentFan.keyMetric}
+              </span>
+              <span className="inline-flex items-center gap-1 text-xs font-mono font-bold text-[#1479D4] bg-blue-50 px-2.5 py-1 rounded-md">
+                <span>View Full Specs</span>
+                <ArrowDown className="w-3.5 h-3.5" />
+              </span>
             </div>
-            <div className="text-left">
-              <div className="font-['Manrope'] text-sm sm:text-base font-black text-[#10243A] flex items-center gap-2">
-                <span>{currentFan.keyMetric}</span>
-                <span className="text-[11px] font-mono font-bold text-[#1479D4] uppercase bg-blue-50 px-2 py-0.5 rounded">
-                  View Specs ↓
-                </span>
-              </div>
-              <div className="text-xs text-gray-600 font-medium line-clamp-1">
-                {currentFan.specPill}
-              </div>
-            </div>
+            <p className="text-xs sm:text-sm text-gray-600 font-medium">
+              {currentFan.specPill}
+            </p>
           </div>
 
-          {/* Dual Primary Action Buttons */}
-          <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+          {/* Dual Action Buttons */}
+          <div className="pt-1 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5">
             <button
               onClick={onOpenQuote}
-              className="px-8 py-4 sm:px-10 sm:py-4.5 bg-[#1479D4] hover:bg-[#10243A] text-white font-['Manrope'] font-extrabold text-base sm:text-lg rounded-2xl shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 flex items-center justify-center gap-3 group cursor-pointer"
+              className="px-8 py-4 sm:px-9 sm:py-4.5 bg-[#1479D4] hover:bg-[#10243A] text-white font-['Manrope'] font-extrabold text-base sm:text-lg rounded-2xl shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 flex items-center justify-center gap-3 group cursor-pointer"
             >
               <span>REQUEST A FREE QUOTE</span>
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
@@ -362,18 +332,70 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           </div>
 
           {/* Trust points */}
-          <div className="pt-2 flex flex-wrap items-center gap-y-2 gap-x-6 text-xs sm:text-sm text-gray-700 font-medium">
-            <div className="flex items-center gap-2">
+          <div className="pt-2 flex flex-wrap items-center gap-y-2 gap-x-6 text-xs sm:text-sm text-gray-600 font-medium">
+            <div className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
               <span>SANS 10142-1 Electrical CoC</span>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-[#1479D4] shrink-0" />
-              <span>Free Room Sizing & Advice</span>
+              <span>Free Sizing & Advice</span>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-[#1479D4] shrink-0" />
               <span>Gauteng-Wide Installation</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Column: VIBRANT, ANIMATED, CLICKABLE FAN IMAGE SHOWCASE (6 cols) */}
+        <div className="lg:col-span-6 flex justify-center">
+          <div
+            ref={imageWrapperRef}
+            onClick={() => handleNavigateToProduct(currentFan.productId)}
+            className="relative w-full max-w-xl cursor-pointer group rounded-3xl overflow-hidden shadow-2xl border-2 border-gray-200 bg-white transition-all duration-500 hover:shadow-cyan-500/20 hover:border-[#1479D4]"
+            title={`Click image to inspect ${currentFan.categoryName} details below`}
+          >
+            {/* The Animated High-Resolution Image */}
+            <div className="relative h-[340px] sm:h-[440px] lg:h-[480px] w-full overflow-hidden bg-gray-100">
+              <img
+                ref={mainImageRef}
+                src={currentFan.image}
+                alt={currentFan.categoryName}
+                className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#10243A]/70 via-transparent to-black/10"></div>
+
+              {/* Floating Top Badge */}
+              <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full text-xs font-['Manrope'] font-extrabold text-[#10243A] flex items-center gap-2 shadow-lg border border-gray-100">
+                <Wind className="w-4 h-4 text-[#1479D4]" />
+                <span>{currentFan.shortLabel}</span>
+              </div>
+
+              {/* Floating Top Right "Click to View" Pill */}
+              <div className="absolute top-4 right-4 bg-[#1479D4] text-white px-3 py-1.5 rounded-full text-xs font-['Manrope'] font-bold flex items-center gap-1.5 shadow-lg group-hover:bg-[#10243A] transition-colors">
+                <Eye className="w-3.5 h-3.5" />
+                <span>Click to inspect ↓</span>
+              </div>
+
+              {/* Floating Bottom Card Overlaid Directly on the Image */}
+              <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-white/80 shadow-xl flex items-center justify-between gap-3 text-[#10243A] group-hover:bg-white transition-colors">
+                <div className="min-w-0">
+                  <div className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#1479D4]">
+                    Featured Cooling Solution
+                  </div>
+                  <div className="font-['Manrope'] font-extrabold text-sm sm:text-base truncate">
+                    {currentFan.categoryName}
+                  </div>
+                  <div className="text-xs text-gray-600 font-medium truncate">
+                    {currentFan.specPill}
+                  </div>
+                </div>
+
+                <div className="shrink-0 w-10 h-10 rounded-xl bg-[#1479D4] text-white flex items-center justify-center group-hover:bg-[#10243A] group-hover:translate-y-0.5 transition-all shadow-md">
+                  <ArrowDown className="w-5 h-5" />
+                </div>
+              </div>
             </div>
           </div>
         </div>

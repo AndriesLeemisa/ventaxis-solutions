@@ -23,136 +23,150 @@ export interface CinematicSlide {
   bestFor: string;
 }
 
+// Every single cooling fan & air cooler on the VentAxis catalogue (11 distinct models, zero repetition)
 const CINEMATIC_SLIDES: CinematicSlide[] = [
   {
-    id: 'hvls-install',
+    id: 'slide-hvls-7300',
     productId: 'prod-hvls-7300',
-    categoryNumber: '01 / 10',
-    categoryName: 'Logistics Warehouse HVLS Installation',
-    shortLabel: 'Warehouse HVLS Install',
-    heroHeadline: 'High-Bay Warehouse',
-    accentWord: 'HVLS Installation.',
-    tagline: 'Certified technicians installing massive 7.3m direct-drive HVLS fans on structural steel with elevated scissor lifts.',
+    categoryNumber: '01 / 11',
+    categoryName: '7.3m Industrial HVLS Fan',
+    shortLabel: '7.3m Warehouse HVLS',
+    heroHeadline: 'Massive 7.3m Span.',
+    accentWord: 'Deep Warehouse Cooling.',
+    tagline: 'Certified technicians installing direct-drive HVLS fans to high-bay structural steel across Gauteng.',
     bgImage: '/images/hero-hvls-install.webp',
     thumbnail: '/images/hero-hvls-install.webp',
-    bestFor: 'Distribution Hubs & Warehouses'
+    bestFor: 'High-Bay Warehouses & Logistics Hubs'
   },
   {
-    id: 'hvls-maintenance',
-    productId: 'prod-hvls-7300',
-    categoryNumber: '02 / 10',
-    categoryName: 'HVLS Motor Hub Torque Servicing',
-    shortLabel: 'HVLS Maintenance',
-    heroHeadline: 'Precision Servicing.',
-    accentWord: 'HVLS Motor Hub Maintenance.',
-    tagline: 'South African electrical technicians performing scheduled torque calibrations and vibration balancing from aerial work platforms.',
+    id: 'slide-hvls-4900',
+    productId: 'prod-hvls-4900',
+    categoryNumber: '02 / 11',
+    categoryName: '4.9m Commercial HVLS Fan',
+    shortLabel: '4.9m Commercial HVLS',
+    heroHeadline: 'Silent High-Capacity.',
+    accentWord: 'Commercial HVLS Cooling.',
+    tagline: 'South African electrical technicians performing scheduled torque servicing and balancing from aerial platforms.',
     bgImage: '/images/hero-hvls-maintenance.webp',
     thumbnail: '/images/hero-hvls-maintenance.webp',
-    bestFor: 'Automotive & Heavy Manufacturing'
+    bestFor: 'Gyms, School Halls & Church Auditoriums'
   },
   {
-    id: 'workshop-wall',
-    productId: 'prod-wall-750',
-    categoryNumber: '03 / 10',
-    categoryName: 'Workshop Wall Fan Servicing',
-    shortLabel: 'Workshop Wall Fan',
-    heroHeadline: 'Rugged Workshop',
-    accentWord: 'Directional Cooling.',
-    tagline: 'Skilled technicians servicing heavy-duty 750mm oscillating wall fans in busy mechanics bays and fabrication workshops.',
-    bgImage: '/images/hero-workshop-wall-service.webp',
-    thumbnail: '/images/hero-workshop-wall-service.webp',
-    bestFor: 'Mechanic Bays & Repair Workshops'
-  },
-  {
-    id: 'hangar-maintenance',
-    productId: 'prod-hvls-7300',
-    categoryNumber: '04 / 10',
-    categoryName: 'Aviation Hangar Fan Maintenance',
-    shortLabel: 'Aircraft Hangar',
-    heroHeadline: 'Aviation Scale.',
-    accentWord: 'Hangar Destratification.',
-    tagline: 'Aviation engineers on hydraulic boom lifts conducting annual inspections on large-span cooling and destratification fans.',
-    bgImage: '/images/hero-hangar-maintenance.webp',
-    thumbnail: '/images/hero-hangar-maintenance.webp',
-    bestFor: 'Aircraft Hangars & Aerospace Workshops'
-  },
-  {
-    id: 'industrial-rigging',
+    id: 'slide-comm-1400',
     productId: 'prod-comm-ceiling-1400',
-    categoryNumber: '05 / 10',
-    categoryName: 'Industrial Ceiling Fan Rigging',
-    shortLabel: 'Industrial Rigging',
-    heroHeadline: 'Certified Rigging.',
-    accentWord: 'Industrial Fan Systems.',
-    tagline: 'Professional electrical contractors mounting high-volume industrial ceiling fan systems to eliminate stagnant heat.',
-    bgImage: '/images/installation-service.webp',
-    thumbnail: '/images/installation-service.webp',
-    bestFor: 'Factory Assembly Lines & Food Processing'
-  },
-  {
-    id: 'school-hall',
-    productId: 'prod-comm-ceiling-1400',
-    categoryNumber: '06 / 10',
-    categoryName: 'School Examination & Assembly Halls',
-    shortLabel: 'School Assembly Hall',
+    categoryNumber: '03 / 11',
+    categoryName: '1400mm Commercial Ceiling Fan',
+    shortLabel: '1400mm Commercial',
     heroHeadline: 'Acoustic Air Movement.',
-    accentWord: 'School Hall Comfort.',
-    tagline: 'Near-silent commercial aerofoils providing gentle air turnover without disturbing examinations or hall speech clarity.',
+    accentWord: 'School & Assembly Halls.',
+    tagline: 'Near-silent high-volume ceiling fans installed for school examination halls, classrooms, and offices.',
     bgImage: '/images/ind-education.webp',
-    thumbnail: '/images/ind-education.webp',
-    bestFor: 'School Halls, Universities & Auditoriums'
+    thumbnail: '/images/product-commercial-ceiling.webp',
+    bestFor: 'Classrooms, Assembly Halls & Offices'
   },
   {
-    id: 'church-auditorium',
-    productId: 'prod-comm-ceiling-1400',
-    categoryNumber: '07 / 10',
-    categoryName: 'Church & Community Auditoriums',
-    shortLabel: 'Church Auditorium',
-    heroHeadline: 'Quiet Ventilation.',
-    accentWord: 'Worship Auditoriums.',
-    tagline: 'High-ceiling fan arrays keeping congregations cool during high-capacity weekend services across Gauteng.',
-    bgImage: '/images/ind-religious.webp',
-    thumbnail: '/images/ind-religious.webp',
-    bestFor: 'Churches, Temples & Community Centres'
+    id: 'slide-wood-1320',
+    productId: 'prod-wood-ceiling-1320',
+    categoryNumber: '04 / 11',
+    categoryName: '1320mm Solid Walnut Ceiling Fan',
+    shortLabel: '1320mm Carved Walnut',
+    heroHeadline: 'Handcrafted Timber.',
+    accentWord: 'Silent Living Comfort.',
+    tagline: 'Carved solid walnut blades with whisper-quiet DC motors for luxury homes and boutique safari lodges.',
+    bgImage: '/images/hero-living-fan.webp',
+    thumbnail: '/images/product-wooden-fan.webp',
+    bestFor: 'Master Bedrooms, Living Rooms & Game Lodges'
   },
   {
-    id: 'pedestal-spot',
-    productId: 'prod-pedestal-750',
-    categoryNumber: '08 / 10',
-    categoryName: 'Heavy-Duty Pedestal Spot Cooling',
-    shortLabel: '750mm Pedestal Fan',
-    heroHeadline: 'High-Velocity',
-    accentWord: 'Portable Spot Cooling.',
-    tagline: 'Cast-iron base 750mm pedestal fans engineered for intense heat dissipation in welding and fabrication zones.',
-    bgImage: '/images/prod-pedestal-750.webp',
-    thumbnail: '/images/prod-pedestal-750.webp',
-    bestFor: 'Welding Bays, Foundry & Packing Stations'
+    id: 'slide-designer-1370',
+    productId: 'prod-designer-led-1370',
+    categoryNumber: '05 / 11',
+    categoryName: '1370mm Designer Fan with LED',
+    shortLabel: '1370mm Designer LED',
+    heroHeadline: 'Modern Architectural.',
+    accentWord: 'Integrated Dimmable LED.',
+    tagline: 'Contemporary aerodynamic blades paired with warm dimmable LED lighting for open-plan living and dining.',
+    bgImage: '/images/product-designer-light.webp',
+    thumbnail: '/images/product-designer-light.webp',
+    bestFor: 'Open-Plan Homes, Apartments & Hospitality'
   },
   {
-    id: 'patio-outdoor',
+    id: 'slide-patio-1420',
     productId: 'prod-outdoor-patio-1420',
-    categoryNumber: '09 / 10',
-    categoryName: 'All-Weather Outdoor Patio Fans',
-    shortLabel: 'Patio & Braai Veranda',
-    heroHeadline: 'All-Weather Comfort.',
-    accentWord: 'Patio & Braai Cooling.',
-    tagline: 'IP55 wet-rated outdoor ceiling fans keeping dining decks cool while naturally deterring mosquitoes.',
+    categoryNumber: '06 / 11',
+    categoryName: '1420mm All-Weather Patio Fan',
+    shortLabel: '1420mm Outdoor Patio',
+    heroHeadline: 'All-Weather Cooling.',
+    accentWord: 'Covered Patio & Braai.',
+    tagline: 'IP55 wet-rated ceiling fans keeping covered dining decks cool while naturally deterring mosquitoes.',
     bgImage: '/images/product-outdoor-fan.webp',
     thumbnail: '/images/product-outdoor-fan.webp',
-    bestFor: 'Covered Decks, Restaurants & Safari Lodges'
+    bestFor: 'Covered Patios, Dining Terraces & Braai Lapas'
   },
   {
-    id: 'timber-residential',
-    productId: 'prod-wood-ceiling-1320',
-    categoryNumber: '10 / 10',
-    categoryName: 'Residential Timber Ceiling Fans',
-    shortLabel: 'Timber Living Fan',
-    heroHeadline: 'Handcrafted Timber.',
-    accentWord: 'Silent DC Comfort.',
-    tagline: 'Solid carved walnut ceiling fans with ultra-efficient whisper-quiet DC motors for modern South African homes.',
-    bgImage: '/images/hero-living-fan.webp',
-    thumbnail: '/images/hero-living-fan.webp',
-    bestFor: 'Living Rooms, Master Bedrooms & Suites'
+    id: 'slide-wall-750',
+    productId: 'prod-wall-750',
+    categoryNumber: '07 / 11',
+    categoryName: '750mm Wall-Mounted Cooling Fan',
+    shortLabel: '750mm Workshop Wall',
+    heroHeadline: 'Rugged Workshop.',
+    accentWord: 'Directional Airflow.',
+    tagline: 'Skilled technicians servicing 750mm oscillating wall fans in busy mechanics bays and fabrication workshops.',
+    bgImage: '/images/hero-workshop-wall-service.webp',
+    thumbnail: '/images/product-industrial-wall.webp',
+    bestFor: 'Mechanic Bays, CrossFit & Factory Workstations'
+  },
+  {
+    id: 'slide-pedestal-750',
+    productId: 'prod-pedestal-750',
+    categoryNumber: '08 / 11',
+    categoryName: '750mm Heavy-Duty Pedestal Fan',
+    shortLabel: '750mm Heavy Pedestal',
+    heroHeadline: 'Portable Spot Cooling.',
+    accentWord: 'Cast-Iron Stability.',
+    tagline: 'Solid tip-resistant cast-iron base with telescopic height adjustment for intense factory floor heat dissipation.',
+    bgImage: '/images/prod-pedestal-750.webp',
+    thumbnail: '/images/prod-pedestal-750.webp',
+    bestFor: 'Factory Floors, Marquees & Service Centres'
+  },
+  {
+    id: 'slide-drum-900',
+    productId: 'prod-drum-900',
+    categoryNumber: '09 / 11',
+    categoryName: '900mm Floor Drum Fan',
+    shortLabel: '900mm Floor Drum',
+    heroHeadline: 'High-Velocity Floor.',
+    accentWord: '360° Tilt Drum Fan.',
+    tagline: 'Rugged rollable barrel fans clearing hot air pockets across loading docks, welding bays, and agricultural sheds.',
+    bgImage: '/images/product-industrial-floor.webp',
+    thumbnail: '/images/product-industrial-floor.webp',
+    bestFor: 'Loading Docks, Welding Bays & Agricultural Sheds'
+  },
+  {
+    id: 'slide-mobile-1100',
+    productId: 'prod-mobile-1100',
+    categoryNumber: '10 / 11',
+    categoryName: '1100mm Mobile Air Cannon',
+    shortLabel: '1100mm Air Cannon',
+    heroHeadline: 'Long-Throw Cooling.',
+    accentWord: '1100mm Air Cannon.',
+    tagline: 'High-thrust mobile air cannons projecting a focused cooling air stream over 25 metres on factory floors.',
+    bgImage: '/images/prod-mobile-1100.webp',
+    thumbnail: '/images/prod-mobile-1100.webp',
+    bestFor: 'Assembly Plants, Steel Fabrication & Packing'
+  },
+  {
+    id: 'slide-evap-18000',
+    productId: 'prod-evap-18000',
+    categoryNumber: '11 / 11',
+    categoryName: '18,000 Industrial Evaporative Cooler',
+    shortLabel: '18,000 Evap Cooler',
+    heroHeadline: '100% Fresh Air.',
+    accentWord: 'Industrial Evaporative.',
+    tagline: 'Cools large open facilities with natural water evaporation, cutting power consumption by up to 80%.',
+    bgImage: '/images/prod-evap-18000.webp',
+    thumbnail: '/images/prod-evap-18000.webp',
+    bestFor: 'Dry Summer Workshops, Auditoriums & Greenhouses'
   }
 ];
 
@@ -414,7 +428,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         </div>
       </div>
 
-      {/* 4. BOTTOM CINEMATIC CONTROLS: 10 Fan Interactive Scrubber */}
+      {/* 4. BOTTOM CINEMATIC CONTROLS: All 11 Catalogue Fans Interactive Scrubber */}
       <div className="relative z-20 w-full bg-black/80 backdrop-blur-xl border-t border-white/10 py-2.5 sm:py-3 px-3 sm:px-6">
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-3">
           {/* Arrow navigation */}
@@ -435,7 +449,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             </button>
           </div>
 
-          {/* Interactive Thumbnails for All 10 Fan Types */}
+          {/* Interactive Thumbnails for All 11 Fans on Website */}
           <div className="flex items-center gap-2 overflow-x-auto pb-1 sm:pb-0 scrollbar-none flex-1 justify-start">
             {CINEMATIC_SLIDES.map((slide, index) => {
               const isActive = index === currentIndex;
@@ -470,7 +484,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           <div className="hidden lg:flex items-center gap-2 text-xs font-mono font-bold text-gray-400 shrink-0">
             <span className="text-[#20B8CE]">{String(currentIndex + 1).padStart(2, '0')}</span>
             <span>/</span>
-            <span>10</span>
+            <span>11</span>
           </div>
         </div>
       </div>

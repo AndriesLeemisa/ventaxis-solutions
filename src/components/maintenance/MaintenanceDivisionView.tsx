@@ -49,16 +49,16 @@ export const MaintenanceDivisionView: React.FC<MaintenanceDivisionViewProps> = (
     <section id="maintenance" className="py-20 bg-white text-[#10243A]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1479D4]/10 text-[#1479D4] text-xs font-mono font-bold uppercase tracking-wider">
+        <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1479D4]/10 text-[#1479D4] text-xs font-['Manrope'] font-bold uppercase tracking-wider">
             <Wrench className="w-3.5 h-3.5" />
-            <span>Preventative Plant Asset Management</span>
+            <span>Fan Care & Servicing</span>
           </div>
           <h2 className="font-['Manrope'] text-3xl sm:text-4xl font-extrabold text-[#10243A] tracking-tight">
-            Dedicated Ventilation Maintenance Division
+            Fan Maintenance & Servicing
           </h2>
           <p className="font-['Inter'] text-sm sm:text-base text-gray-600 leading-relaxed">
-            Industrial and commercial ventilation assets require routine dynamic balancing, thermal imaging, and ultrasonic cleaning. VentAxis maintains facility uptime with structured Annual Service Agreements (SLAs) and 4-hour breakdown guarantees.
+            Keep your fans running quietly, safely, and efficiently. We provide scheduled inspections, blade cleaning, electrical checks, and rapid repair response across Gauteng.
           </p>
         </div>
 

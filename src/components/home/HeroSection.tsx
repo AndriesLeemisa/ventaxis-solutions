@@ -1,16 +1,6 @@
 import React from 'react';
-import { AirflowCanvas } from '../common/AirflowCanvas';
-import {
-  ArrowRight,
-  ShieldCheck,
-  Zap,
-  Wrench,
-  CheckCircle2,
-  Building2,
-  Factory,
-  Compass,
-  ChevronDown
-} from 'lucide-react';
+import { ArrowRight, ShieldCheck, CheckCircle2, PhoneCall } from 'lucide-react';
+import { COMPANY_DETAILS } from '../../lib/constants';
 
 interface HeroSectionProps {
   onOpenQuote: () => void;
@@ -24,115 +14,76 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   onExploreServices,
 }) => {
   return (
-    <section className="relative min-h-[85vh] lg:min-h-[90vh] bg-[#10243A] text-white flex flex-col justify-between overflow-hidden">
-      {/* Background Cinematic Industrial Image with High-Grade Engineering Overlay */}
+    <section className="relative min-h-[75vh] md:min-h-[82vh] flex items-center bg-[#FAF8F5] overflow-hidden">
+      {/* Sunlit Architectural Background — Bright, Natural, No Dark Blur */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/market-industrial.jpg"
-          alt="Commercial and industrial facility with high-volume low-speed ventilation ceiling fan"
-          className="w-full h-full object-cover object-center scale-105 transition-transform duration-1000 ease-out brightness-[0.42] contrast-[1.12]"
+          src="/images/hero-living-fan.jpg"
+          alt="Sunlit architectural space with premium ceiling fan"
+          className="w-full h-full object-cover object-center"
         />
-        {/* Subtle engineering grid & gradient vignette */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#10243A] via-[#10243A]/85 to-transparent"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-[#10243A] via-transparent to-[#10243A]/70"></div>
+        {/* Soft, warm light wash for effortless legibility while keeping the sunlit interior visible */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-transparent sm:via-white/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-white/40 via-transparent to-white/30"></div>
       </div>
 
-      {/* Aerodynamic Airflow Streamlines Canvas */}
-      <AirflowCanvas />
-
-      {/* Hero Content */}
-      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 pt-16 pb-12 my-auto w-full">
-        <div className="max-w-3xl space-y-6">
-          {/* Engineering Badge */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1479D4]/20 border border-[#20B8CE]/40 backdrop-blur-md">
-            <span className="w-2 h-2 rounded-full bg-[#20B8CE] animate-pulse"></span>
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#20B8CE]">
-              Engineering Contractor • Gauteng, South Africa
+      {/* Main Decluttered Above-the-Fold Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-20 w-full">
+        <div className="max-w-2xl bg-white/80 backdrop-blur-md sm:bg-transparent sm:backdrop-blur-none p-6 sm:p-0 rounded-3xl border border-white/60 sm:border-0 shadow-lg sm:shadow-none space-y-6">
+          {/* Subtle Human Badge */}
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#10243A]/5 border border-[#10243A]/10 text-[#10243A]">
+            <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
+            <span className="text-xs font-['Manrope'] font-semibold tracking-wide">
+              Cooling Fan Supply & Installation • Gauteng
             </span>
           </div>
 
-          {/* Main Headline */}
-          <h1 className="font-['Manrope'] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.08]">
-            Engineering <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#20B8CE] to-[#1479D4]">Better Airflow.</span>
+          {/* Clean, Human Headline */}
+          <h1 className="font-['Manrope'] text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-[#10243A] leading-[1.1]">
+            Cooling, <span className="text-[#1479D4]">Refined.</span>
+            <br />
+            <span className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-700 block mt-2">
+              The right fans, expertly installed.
+            </span>
           </h1>
 
-          {/* Supporting Statement */}
-          <p className="font-['Inter'] text-lg sm:text-xl text-[#EEF3F7]/90 leading-relaxed font-normal max-w-2xl">
-            Commercial and industrial fan solutions for institutions, businesses and industrial facilities across Gauteng.
+          {/* Concise, Human Statement (No robotic filler) */}
+          <p className="font-['Inter'] text-base sm:text-lg text-gray-700 leading-relaxed">
+            Keep your home, classroom, or workplace cool all year round. We help you choose the right fan for your room size and install it cleanly with full SANS electrical compliance.
           </p>
 
-          <p className="text-sm text-gray-300 max-w-xl">
-            We supply, install, wire, test, and maintain high-volume low-speed (HVLS), axial, centrifugal, and specialist extraction ventilation systems with full SANS 10142-1 CoC compliance.
-          </p>
-
-          {/* CTAs */}
-          <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+          {/* Direct Action Buttons */}
+          <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
             <button
               onClick={onOpenQuote}
-              className="px-8 py-4 bg-[#1479D4] hover:bg-[#20B8CE] text-[#10243A] hover:text-[#10243A] font-['Manrope'] font-extrabold text-base rounded-xl shadow-xl hover:shadow-cyan-500/20 transition-all duration-300 flex items-center justify-center gap-3 group cursor-pointer"
+              className="px-7 py-3.5 bg-[#1479D4] hover:bg-[#10243A] text-white font-['Manrope'] font-bold text-sm sm:text-base rounded-xl shadow-md hover:shadow-lg transition-all duration-200 flex items-center justify-center gap-2 group cursor-pointer"
             >
-              <span className="text-white group-hover:text-[#10243A] transition-colors">REQUEST A QUOTE</span>
-              <ArrowRight className="w-5 h-5 text-[#20B8CE] group-hover:text-[#10243A] transition-transform group-hover:translate-x-1" />
+              <span>REQUEST A FREE QUOTE</span>
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </button>
 
             <button
               onClick={onExploreProducts}
-              className="px-7 py-4 bg-white/10 hover:bg-white/20 text-white font-['Manrope'] font-bold text-base rounded-xl border border-white/20 backdrop-blur-md transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer"
+              className="px-6 py-3.5 bg-white hover:bg-gray-50 text-[#10243A] font-['Manrope'] font-semibold text-sm sm:text-base rounded-xl border border-gray-300 shadow-xs transition-all duration-200 flex items-center justify-center cursor-pointer"
             >
-              <span>EXPLORE OUR SOLUTIONS</span>
+              <span>Browse Cooling Fans</span>
             </button>
           </div>
 
-          {/* Key Value Propositions */}
-          <div className="pt-6 grid grid-cols-2 sm:grid-cols-3 gap-4 border-t border-white/15 text-xs text-gray-300">
-            <div className="flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-[#20B8CE] shrink-0" />
+          {/* Trust Points — Simple, Human, Clear */}
+          <div className="pt-4 flex flex-wrap items-center gap-y-2 gap-x-6 text-xs sm:text-sm text-gray-600 border-t border-gray-200/80">
+            <div className="flex items-center gap-1.5 font-medium text-gray-800">
+              <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
               <span>SANS 10142-1 CoC Certified</span>
             </div>
-            <div className="flex items-center gap-2">
-              <Wrench className="w-4 h-4 text-[#20B8CE] shrink-0" />
-              <span>Certified Riggers & MEWP</span>
+            <div className="flex items-center gap-1.5 font-medium text-gray-800">
+              <CheckCircle2 className="w-4 h-4 text-[#1479D4] shrink-0" />
+              <span>Free Sizing & Advice</span>
             </div>
-            <div className="flex items-center gap-2 col-span-2 sm:col-span-1">
-              <Zap className="w-4 h-4 text-[#20B8CE] shrink-0" />
-              <span>Rapid Gauteng Deployment</span>
+            <div className="flex items-center gap-1.5 font-medium text-gray-800">
+              <CheckCircle2 className="w-4 h-4 text-[#1479D4] shrink-0" />
+              <span>Johannesburg & Pretoria</span>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Bottom Engineering Capabilities Bar */}
-      <div className="relative z-20 w-full bg-[#0A1726]/90 border-t border-white/10 backdrop-blur-md py-4 px-4 sm:px-6">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4 text-xs">
-          <div className="flex items-center gap-6 flex-wrap">
-            <span className="text-gray-400 font-mono uppercase tracking-wider text-[11px]">
-              Engineered Divisions:
-            </span>
-            <button
-              onClick={onExploreProducts}
-              className="text-white hover:text-[#20B8CE] transition-colors font-semibold flex items-center gap-1.5"
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-[#1479D4]"></span>
-              HVLS & Air Movement
-            </button>
-            <button
-              onClick={onExploreProducts}
-              className="text-white hover:text-[#20B8CE] transition-colors font-semibold flex items-center gap-1.5"
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-[#20B8CE]"></span>
-              Industrial Ventilation & Blowers
-            </button>
-            <button
-              onClick={onExploreProducts}
-              className="text-white hover:text-[#20B8CE] transition-colors font-semibold flex items-center gap-1.5"
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
-              Specialist Smoke & Dust Extraction
-            </button>
-          </div>
-
-          <div className="text-gray-400 font-mono text-[11px] hidden sm:block">
-            Coverage: Johannesburg • Ekurhuleni • Pretoria • Midrand • Vaal
           </div>
         </div>
       </div>

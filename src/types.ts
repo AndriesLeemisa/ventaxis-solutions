@@ -1,28 +1,23 @@
 export type ProductCategory =
-  | 'AIR MOVEMENT'
-  | 'INDUSTRIAL VENTILATION'
-  | 'SPECIALIST SYSTEMS';
+  | 'CEILING & HVLS FANS'
+  | 'WALL & PEDESTAL FANS'
+  | 'PORTABLE & DRUM FANS'
+  | 'EVAPORATIVE COOLERS';
 
 export type ProductSubCategory =
-  // Air Movement
-  | 'HVLS ceiling fans'
-  | 'Commercial ceiling fans'
-  | 'Wall-mounted fans'
-  | 'Pedestal fans'
-  | 'Drum fans'
-  | 'Mobile industrial fans'
-  // Industrial Ventilation
-  | 'Axial flow fans'
-  | 'Centrifugal fans'
-  | 'Inline duct fans'
-  | 'Roof extractors'
-  | 'Industrial blowers'
-  // Specialist Systems
-  | 'Evaporative coolers'
-  | 'Smoke extraction fans'
-  | 'Dust extraction fans'
-  | 'Fume extraction systems'
-  | 'Specialist industrial ventilation equipment';
+  // Ceiling & HVLS
+  | 'Industrial HVLS Fans'
+  | 'Commercial Ceiling Fans'
+  | 'Residential & Designer Fans'
+  | 'Outdoor Patio Fans'
+  // Wall & Pedestal
+  | 'Wall-Mounted Fans'
+  | 'Heavy-Duty Pedestal Fans'
+  // Portable & Drum
+  | 'Floor Drum Fans'
+  | 'Mobile Air Cannons'
+  // Evaporative
+  | 'Evaporative Air Coolers';
 
 export interface Product {
   id: string;

@@ -54,7 +54,7 @@ export const QuoteWizard: React.FC<QuoteWizardProps> = ({
   const [installationLocation, setInstallationLocation] = useState('');
 
   // Equipment Multiple Category Selection
-  const [selectedCategories, setSelectedCategories] = useState<string[]>(['AIR MOVEMENT']);
+  const [selectedCategories, setSelectedCategories] = useState<string[]>(['CEILING & HVLS FANS']);
   const [quantityEstimated, setQuantityEstimated] = useState<number>(4);
   const [buildingSizeM2, setBuildingSizeM2] = useState<number>(1500);
   const [ceilingHeightM, setCeilingHeightM] = useState<number>(8.5);
@@ -429,9 +429,9 @@ export const QuoteWizard: React.FC<QuoteWizardProps> = ({
                 </label>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs">
                   {[
-                    { key: 'AIR MOVEMENT', label: 'Air Movement (HVLS, Commercial Ceiling, Wall Fans)' },
-                    { key: 'INDUSTRIAL VENTILATION', label: 'Industrial Ventilation (Axial, Centrifugal, Roof Cowls)' },
-                    { key: 'SPECIALIST SYSTEMS', label: 'Specialist Systems (Smoke Spill, Dust & Fume Extraction)' }
+                    { key: 'CEILING & HVLS FANS', label: 'Ceiling & HVLS Fans (Homes, School Halls, Warehouses)' },
+                    { key: 'WALL & PEDESTAL FANS', label: 'Wall & Pedestal Fans (Heavy-Duty Workshops & Gyms)' },
+                    { key: 'PORTABLE & EVAPORATIVE', label: 'Floor Drums, Mobile Air Cannons & Evaporative Coolers' }
                   ].map((item) => {
                     const isChecked = selectedCategories.includes(item.key);
                     return (

@@ -36,21 +36,21 @@ export const GautengServiceAreaView: React.FC<GautengServiceAreaViewProps> = ({
     <section id="service-area" className="py-20 bg-white text-[#10243A]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#20B8CE]/15 text-[#10243A] text-xs font-mono font-bold uppercase tracking-wider">
+        <div className="text-center max-w-2xl mx-auto mb-10 space-y-2">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#20B8CE]/15 text-[#10243A] text-xs font-['Manrope'] font-bold uppercase tracking-wider">
             <MapPin className="w-3.5 h-3.5 text-[#1479D4]" />
-            <span>Operational Coverage Verification</span>
+            <span>Fast Turnaround Across Gauteng</span>
           </div>
           <h2 className="font-['Manrope'] text-3xl sm:text-4xl font-extrabold text-[#10243A] tracking-tight">
-            Gauteng Service Area & Rapid Deployment
+            Gauteng Service Coverage
           </h2>
           <p className="font-['Inter'] text-sm sm:text-base text-gray-600 leading-relaxed">
-            VentAxis Solutions provides verified direct engineering installation and maintenance services exclusively where our mobile technical rigging teams can maintain guaranteed response SLAs.
+            We supply, install, and service cooling fans across all major residential, commercial, and industrial areas in Gauteng. Our certified installation teams are on the road daily.
           </p>
         </div>
 
         {/* View Mode Toggle: Gauteng Active vs National Expansion */}
-        <div className="flex justify-center mb-10">
+        <div className="flex justify-center mb-8">
           <div className="inline-flex p-1 rounded-xl bg-gray-100 border border-gray-200 text-xs font-['Manrope'] font-bold">
             <button
               onClick={() => setActiveTab('gauteng')}
@@ -60,7 +60,7 @@ export const GautengServiceAreaView: React.FC<GautengServiceAreaViewProps> = ({
                   : 'text-gray-600 hover:text-gray-900'
               }`}
             >
-              Active Gauteng Metropolitan Hubs
+              Gauteng Service Areas
             </button>
             <button
               onClick={() => setActiveTab('expansion')}
@@ -70,7 +70,7 @@ export const GautengServiceAreaView: React.FC<GautengServiceAreaViewProps> = ({
                   : 'text-gray-600 hover:text-gray-900'
               }`}
             >
-              Provincial Expansion Architecture
+              National & Regional Coverage
             </button>
           </div>
         </div>

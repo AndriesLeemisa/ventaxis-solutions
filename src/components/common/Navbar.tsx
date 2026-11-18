@@ -60,61 +60,44 @@ export const Navbar: React.FC<NavbarProps> = ({
       {/* Top Utility Announcement Bar */}
       <div className="bg-[#10243A] text-[#EEF3F7] text-xs py-2 px-4 border-b border-[#173250]">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
-          <div className="flex items-center gap-4 flex-wrap">
+          <div className="flex items-center gap-3">
             <span className="flex items-center gap-1.5 text-[#20B8CE] font-semibold">
               <MapPin className="w-3.5 h-3.5" />
-              <span>Gauteng Hub: Johannesburg • Ekurhuleni • Pretoria</span>
+              <span>Johannesburg & Pretoria • Gauteng</span>
             </span>
-            <span className="hidden md:inline-block text-[#EEF3F7]/30">|</span>
-            <span className="hidden md:flex items-center gap-1 text-[#EEF3F7]/80">
-              <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-              <span>SANS 10142-1 CoC Certified Installation Contractor</span>
+            <span className="hidden sm:inline-block text-[#EEF3F7]/30">•</span>
+            <span className="hidden sm:inline-block text-[#EEF3F7]/80">
+              SANS 10142-1 CoC Certified Installation
             </span>
           </div>
 
           <div className="flex items-center gap-3 text-xs">
             <a
               href={`tel:${config.telephone.replace(/\s+/g, '')}`}
-              className="flex items-center gap-1.5 hover:text-[#20B8CE] transition-colors"
+              className="flex items-center gap-1 hover:text-[#20B8CE] transition-colors"
               title="Office Line"
             >
-              <Phone className="w-3.5 h-3.5 text-[#1479D4]" />
+              <Phone className="w-3.5 h-3.5 text-[#20B8CE]" />
               <span className="font-medium">{config.telephone}</span>
-            </a>
-            <span className="text-[#EEF3F7]/30">/</span>
-            <a
-              href={`tel:${config.emergencyHotline.replace(/\s+/g, '')}`}
-              className="flex items-center gap-1.5 hover:text-[#20B8CE] transition-colors"
-              title="Mobile & WhatsApp"
-            >
-              <span className="font-medium">{config.emergencyHotline}</span>
             </a>
             <span className="text-[#EEF3F7]/30">|</span>
             <a
+              href={`https://wa.me/27834328294`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-emerald-400 hover:text-emerald-300 transition-colors font-medium"
+              title="WhatsApp Specialist"
+            >
+              <span>WhatsApp: {config.emergencyHotline}</span>
+            </a>
+            <span className="hidden md:inline-block text-[#EEF3F7]/30">|</span>
+            <a
               href={`mailto:${config.email}`}
-              className="hidden sm:flex items-center gap-1.5 hover:text-[#20B8CE] transition-colors"
+              className="hidden md:flex items-center gap-1 hover:text-[#20B8CE] transition-colors"
             >
               <Mail className="w-3.5 h-3.5 text-[#20B8CE]" />
               <span>{config.email}</span>
             </a>
-            <span className="hidden sm:inline-block text-[#EEF3F7]/30">|</span>
-            <button
-              onClick={onOpenBrandKit}
-              className="hidden lg:flex items-center gap-1 hover:text-[#20B8CE] transition-colors"
-              title="Brand Identity Guidelines & Assets"
-            >
-              <Layers className="w-3.5 h-3.5 text-[#20B8CE]" />
-              <span>Brand Kit</span>
-            </button>
-            <span className="hidden lg:inline-block text-[#EEF3F7]/30">|</span>
-            <button
-              onClick={onOpenAdmin}
-              className="flex items-center gap-1 text-[#EEF3F7]/70 hover:text-white transition-colors"
-              title="Administrator Management Dashboard"
-            >
-              <Lock className="w-3 h-3 text-amber-400" />
-              <span>Portal</span>
-            </button>
           </div>
         </div>
       </div>
@@ -148,7 +131,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   activeSection === 'products' ? 'text-[#1479D4] bg-[#EEF3F7]' : ''
                 }`}
               >
-                <span>Products</span>
+                <span>Cooling Fans</span>
                 <ChevronDown className="w-4 h-4 opacity-70" />
               </button>
 
@@ -158,7 +141,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                     onClick={() => handleNavClick('products')}
                     className="w-full text-left px-3 py-2 rounded-lg hover:bg-[#EEF3F7] text-xs font-bold text-[#10243A] uppercase tracking-wider flex items-center justify-between"
                   >
-                    <span>Full Product Catalogue</span>
+                    <span>All Cooling Fans</span>
                     <ArrowRight className="w-3.5 h-3.5 text-[#1479D4]" />
                   </button>
                   <div className="border-t border-gray-100 my-1"></div>
@@ -166,22 +149,22 @@ export const Navbar: React.FC<NavbarProps> = ({
                     onClick={() => handleNavClick('products')}
                     className="w-full text-left px-3 py-2 rounded-lg hover:bg-[#EEF3F7] text-xs text-[#10243A]"
                   >
-                    <div className="font-semibold text-[#1479D4]">Air Movement</div>
-                    <div className="text-[11px] text-gray-500">HVLS, Commercial Ceiling, Wall & Pedestal</div>
+                    <div className="font-semibold text-[#1479D4]">Ceiling & HVLS Fans</div>
+                    <div className="text-[11px] text-gray-500">Living rooms, halls, warehouses & patios</div>
                   </button>
                   <button
                     onClick={() => handleNavClick('products')}
                     className="w-full text-left px-3 py-2 rounded-lg hover:bg-[#EEF3F7] text-xs text-[#10243A]"
                   >
-                    <div className="font-semibold text-[#1479D4]">Industrial Ventilation</div>
-                    <div className="text-[11px] text-gray-500">Axials, Centrifugal, Inline Duct & Roof Cowls</div>
+                    <div className="font-semibold text-[#1479D4]">Wall & Pedestal Fans</div>
+                    <div className="text-[11px] text-gray-500">750mm oscillating industrial fans & stands</div>
                   </button>
                   <button
                     onClick={() => handleNavClick('products')}
                     className="w-full text-left px-3 py-2 rounded-lg hover:bg-[#EEF3F7] text-xs text-[#10243A]"
                   >
-                    <div className="font-semibold text-[#1479D4]">Specialist Systems</div>
-                    <div className="text-[11px] text-gray-500">Evaporative Coolers, Smoke & Dust Extraction</div>
+                    <div className="font-semibold text-[#1479D4]">Portable & Evaporative Coolers</div>
+                    <div className="text-[11px] text-gray-500">Floor drums, air cannons & evaporative cooling</div>
                   </button>
                 </div>
               )}
@@ -209,7 +192,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                     onClick={() => handleNavClick('services')}
                     className="w-full text-left px-3 py-2 rounded-lg hover:bg-[#EEF3F7] text-xs font-bold text-[#10243A] uppercase tracking-wider flex items-center justify-between"
                   >
-                    <span>Our 7-Step Workflow</span>
+                    <span>Installation & Wiring</span>
                     <ArrowRight className="w-3.5 h-3.5 text-[#1479D4]" />
                   </button>
                   <div className="border-t border-gray-100 my-1"></div>
@@ -218,25 +201,25 @@ export const Navbar: React.FC<NavbarProps> = ({
                       onClick={() => handleNavClick('services')}
                       className="text-left px-3 py-1.5 rounded hover:bg-[#EEF3F7] text-gray-700 hover:text-[#1479D4]"
                     >
-                      • HVLS Fan Rigging & Mounting
+                      • Residential Ceiling Fan Installation
                     </button>
                     <button
                       onClick={() => handleNavClick('services')}
                       className="text-left px-3 py-1.5 rounded hover:bg-[#EEF3F7] text-gray-700 hover:text-[#1479D4]"
                     >
-                      • Commercial & Institutional Fan Installations
+                      • Commercial & School Hall Fan Installations
                     </button>
                     <button
                       onClick={() => handleNavClick('services')}
                       className="text-left px-3 py-1.5 rounded hover:bg-[#EEF3F7] text-gray-700 hover:text-[#1479D4]"
                     >
-                      • Smoke & Fume Extraction Systems
+                      • Industrial Warehouse HVLS Fan Rigging
                     </button>
                     <button
                       onClick={() => handleNavClick('services')}
                       className="text-left px-3 py-1.5 rounded hover:bg-[#EEF3F7] text-gray-700 hover:text-[#1479D4]"
                     >
-                      • Electrical Coordination & SANS 10142-1 CoC
+                      • Electrical Connection & SANS 10142-1 CoC
                     </button>
                   </div>
                 </div>
@@ -336,19 +319,19 @@ export const Navbar: React.FC<NavbarProps> = ({
               onClick={() => handleNavClick('products')}
               className="text-left px-3 py-2.5 rounded-lg hover:bg-[#EEF3F7] text-[#10243A]"
             >
-              Products Catalogue
+              Cooling Fans Catalogue
             </button>
             <button
               onClick={() => handleNavClick('services')}
               className="text-left px-3 py-2.5 rounded-lg hover:bg-[#EEF3F7] text-[#10243A]"
             >
-              Installation Services & 7-Step Workflow
+              Installation & Wiring Services
             </button>
             <button
               onClick={() => handleNavClick('industries')}
               className="text-left px-3 py-2.5 rounded-lg hover:bg-[#EEF3F7] text-[#10243A]"
             >
-              Industries (Education, Healthcare, Commercial, etc.)
+              Sectors (Homes, Schools, Halls & Warehouses)
             </button>
             <button
               onClick={() => handleNavClick('service-area')}
@@ -360,14 +343,14 @@ export const Navbar: React.FC<NavbarProps> = ({
               onClick={() => handleNavClick('portfolio')}
               className="text-left px-3 py-2.5 rounded-lg hover:bg-[#EEF3F7] text-[#10243A]"
             >
-              Project Showcase
+              Completed Installations
             </button>
             <button
               onClick={() => handleNavClick('maintenance')}
               className="text-left px-3 py-2.5 rounded-lg hover:bg-[#EEF3F7] text-[#10243A] flex items-center gap-2"
             >
               <Wrench className="w-4 h-4 text-[#1479D4]" />
-              <span>Maintenance & Servicing SLA</span>
+              <span>Maintenance & Servicing</span>
             </button>
           </div>
 

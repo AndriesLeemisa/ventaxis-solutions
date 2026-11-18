@@ -34,14 +34,14 @@ export const Footer: React.FC<FooterProps> = ({
         {/* Top Callout Banner */}
         <div className="bg-gradient-to-r from-[#173250] to-[#1479D4] rounded-2xl p-8 mb-14 shadow-xl border border-[#20B8CE]/30 flex flex-col lg:flex-row items-center justify-between gap-6">
           <div className="space-y-2 text-center lg:text-left">
-            <span className="text-[#20B8CE] text-xs font-mono uppercase tracking-widest font-bold">
-              Turnkey Commercial & Industrial Airflow
+            <span className="text-[#20B8CE] text-xs font-['Manrope'] uppercase tracking-widest font-bold">
+              Expert Cooling Fan Supply & Installation
             </span>
             <h3 className="font-['Manrope'] text-2xl sm:text-3xl font-extrabold text-white">
-              Ready to engineer optimal ventilation for your Gauteng facility?
+              Ready to keep your space comfortable and cool?
             </h3>
             <p className="text-white/80 text-sm max-w-2xl">
-              From SANS compliant school hall installations to massive 7.3m industrial HVLS distribution warehouses.
+              From designer residential fans and school hall cooling to massive warehouse HVLS installations across Gauteng.
             </p>
           </div>
 
@@ -50,7 +50,7 @@ export const Footer: React.FC<FooterProps> = ({
               onClick={onOpenQuote}
               className="px-6 py-3.5 bg-white text-[#10243A] font-['Manrope'] font-bold rounded-xl shadow-lg hover:bg-[#EEF3F7] transition-all flex items-center gap-2 group cursor-pointer"
             >
-              <span>REQUEST AN ENGINEERING QUOTE</span>
+              <span>REQUEST A FREE QUOTE</span>
               <ArrowUpRight className="w-4 h-4 text-[#1479D4] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </button>
             <a
@@ -93,42 +93,42 @@ export const Footer: React.FC<FooterProps> = ({
           {/* Column 2: Solutions & Categories */}
           <div className="space-y-3">
             <h4 className="font-['Manrope'] font-bold text-white text-sm uppercase tracking-wider">
-              Product Catalogue
+              Cooling Fans
             </h4>
             <ul className="space-y-2 text-xs text-gray-300">
               <li>
                 <button onClick={() => onNavigate('products')} className="hover:text-[#20B8CE] transition-colors text-left">
-                  HVLS Industrial Ceiling Fans
+                  Industrial HVLS Ceiling Fans (7.3m & 4.9m)
                 </button>
               </li>
               <li>
                 <button onClick={() => onNavigate('products')} className="hover:text-[#20B8CE] transition-colors text-left">
-                  Commercial Ceiling Fans
+                  Commercial Ceiling Fans (1400mm)
                 </button>
               </li>
               <li>
                 <button onClick={() => onNavigate('products')} className="hover:text-[#20B8CE] transition-colors text-left">
-                  Axial Flow Wall & Cased Fans
+                  Solid Timber & Designer Ceiling Fans
                 </button>
               </li>
               <li>
                 <button onClick={() => onNavigate('products')} className="hover:text-[#20B8CE] transition-colors text-left">
-                  Backward-Curved Centrifugal Fans
+                  All-Weather Patio & Braai Fans
                 </button>
               </li>
               <li>
                 <button onClick={() => onNavigate('products')} className="hover:text-[#20B8CE] transition-colors text-left">
-                  High-Volume Roof Cowl Extractors
+                  Wall-Mounted Oscillating Fans (750mm)
                 </button>
               </li>
               <li>
                 <button onClick={() => onNavigate('products')} className="hover:text-[#20B8CE] transition-colors text-left">
-                  Evaporative Industrial Coolers
+                  Heavy-Duty Pedestal & Floor Drum Fans
                 </button>
               </li>
               <li>
                 <button onClick={() => onNavigate('products')} className="hover:text-[#20B8CE] transition-colors text-left">
-                  Smoke Spill Fans (400°C / 2h)
+                  Industrial Evaporative Air Coolers
                 </button>
               </li>
             </ul>

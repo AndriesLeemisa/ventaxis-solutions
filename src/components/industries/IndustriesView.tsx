@@ -44,16 +44,16 @@ export const IndustriesView: React.FC<IndustriesViewProps> = ({
     <section id="industries" className="py-20 bg-gray-50 text-[#10243A]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1479D4]/10 text-[#1479D4] text-xs font-mono font-bold uppercase tracking-wider">
+        <div className="text-center max-w-2xl mx-auto mb-10 space-y-2">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1479D4]/10 text-[#1479D4] text-xs font-['Manrope'] font-bold uppercase tracking-wider">
             <Building2 className="w-3.5 h-3.5" />
-            <span>Target Sectors & Environments</span>
+            <span>Sectors We Serve</span>
           </div>
           <h2 className="font-['Manrope'] text-3xl sm:text-4xl font-extrabold text-[#10243A] tracking-tight">
-            Tailored Industry Solutions
+            Cooling for Every Environment
           </h2>
           <p className="font-['Inter'] text-sm sm:text-base text-gray-600 leading-relaxed">
-            Different building structures present unique environmental challenges. We engineer custom solutions addressing acoustics, infectious airborne particle control, high-bay destratification, and industrial dust capture.
+            Every building has different airflow needs. We provide tailored cooling fan solutions for homes, schools, auditoriums, commercial stores, and warehouses across Gauteng.
           </p>
         </div>
 
@@ -87,9 +87,9 @@ export const IndustriesView: React.FC<IndustriesViewProps> = ({
             <img
               src={activeIndustry.image}
               alt={activeIndustry.name}
-              className="w-full h-full object-cover brightness-[0.55]"
+              className="w-full h-full object-cover brightness-[0.82]"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#10243A] via-[#10243A]/40 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#10243A]/90 via-[#10243A]/40 to-transparent"></div>
 
             <div className="absolute bottom-6 left-6 right-6 text-white max-w-3xl space-y-2">
               <div className="flex items-center gap-2">

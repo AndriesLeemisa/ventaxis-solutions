@@ -9,7 +9,9 @@ import {
   FileText,
   Clock,
   ArrowUpRight,
-  Lock
+  Lock,
+  Shield,
+  Wind
 } from 'lucide-react';
 import { getCompanyConfig } from '../../data/companyConfig';
 
@@ -29,33 +31,33 @@ export const Footer: React.FC<FooterProps> = ({
   const config = getCompanyConfig();
 
   return (
-    <footer className="bg-[#10243A] text-white pt-16 pb-10 border-t border-[#173250] text-sm">
+    <footer className="bg-[#070E18] text-white pt-16 pb-10 border-t border-[#173250] text-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Top Callout Banner */}
-        <div className="bg-gradient-to-r from-[#173250] to-[#1479D4] rounded-2xl p-8 mb-14 shadow-xl border border-[#20B8CE]/30 flex flex-col lg:flex-row items-center justify-between gap-6">
+        <div className="bg-gradient-to-r from-[#10243A] via-[#1479D4] to-[#20B8CE] rounded-2xl p-8 mb-14 shadow-xl border border-white/20 flex flex-col lg:flex-row items-center justify-between gap-6">
           <div className="space-y-2 text-center lg:text-left">
-            <span className="text-[#20B8CE] text-xs font-['Manrope'] uppercase tracking-widest font-bold">
-              Expert Cooling Fan Supply & Installation
+            <span className="text-[#070E18] bg-white/90 px-3 py-1 rounded-full text-xs font-['Manrope'] uppercase tracking-widest font-black">
+              Industrial HVAC & Cooling Engineering
             </span>
             <h3 className="font-['Manrope'] text-2xl sm:text-3xl font-extrabold text-white">
-              Ready to keep your space comfortable and cool?
+              Ready to engineer your facility's climate system?
             </h3>
-            <p className="text-white/80 text-sm max-w-2xl">
-              From designer residential fans and school hall cooling to massive warehouse HVLS installations across Gauteng.
+            <p className="text-white/90 text-sm max-w-2xl">
+              Turnkey industrial HVAC plants, liquid chillers, multi-zone VRV/VRF air conditioning, and security perimeter fencing across Gauteng.
             </p>
           </div>
 
           <div className="flex flex-wrap items-center gap-4">
             <button
               onClick={onOpenQuote}
-              className="px-6 py-3.5 bg-white text-[#10243A] font-['Manrope'] font-bold rounded-xl shadow-lg hover:bg-[#EEF3F7] transition-all flex items-center gap-2 group cursor-pointer"
+              className="px-6 py-3.5 bg-white text-[#10243A] font-['Manrope'] font-black rounded-xl shadow-lg hover:bg-slate-100 transition-all flex items-center gap-2 group cursor-pointer"
             >
-              <span>REQUEST A FREE QUOTE</span>
+              <span>REQUEST ENGINEERING QUOTE</span>
               <ArrowUpRight className="w-4 h-4 text-[#1479D4] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </button>
             <a
               href={`tel:${config.telephone.replace(/\s+/g, '')}`}
-              className="px-5 py-3.5 bg-[#10243A]/80 hover:bg-[#10243A] text-white font-semibold rounded-xl border border-white/20 transition-colors flex items-center gap-2"
+              className="px-5 py-3.5 bg-[#070E18]/80 hover:bg-[#070E18] text-white font-semibold rounded-xl border border-white/20 transition-colors flex items-center gap-2"
             >
               <Phone className="w-4 h-4 text-[#20B8CE]" />
               <span>{config.telephone}</span>
@@ -69,20 +71,20 @@ export const Footer: React.FC<FooterProps> = ({
           <div className="lg:col-span-2 space-y-4">
             <Logo variant="monochrome-white" size="md" />
             <p className="text-gray-300 text-xs leading-relaxed max-w-sm mt-3">
-              VentAxis Solutions supplies, installs and maintains commercial and industrial fans and mechanical ventilation systems across Gauteng, South Africa. Positioned as a dedicated engineering contractor.
+              VentAxis Solutions is a premier industrial HVAC, large-scale cooling, and commercial engineering contractor in Gauteng, South Africa. Specialising in centralized chiller plants, rooftop air-conditioning, industrial ventilation, and perimeter security infrastructure.
             </p>
 
             {/* Configurable Legal Entity Box */}
-            <div className="p-3.5 bg-[#0A1726] rounded-xl border border-[#173250] text-xs space-y-1.5 text-gray-300">
+            <div className="p-3.5 bg-[#0A131F] rounded-xl border border-[#173250] text-xs space-y-1.5 text-gray-300">
               <div className="flex items-center gap-1.5 text-white font-semibold">
                 <ShieldCheck className="w-4 h-4 text-[#20B8CE]" />
                 <span>{config.legalCompanyName}</span>
               </div>
               <div className="text-[11px] text-gray-400 font-mono">
-                {config.registrationNumber}
+                Registration: {config.registrationNumber}
               </div>
               <div className="text-[11px] text-gray-400 font-mono">
-                {config.vatNumber}
+                VAT: {config.vatNumber}
               </div>
               <div className="text-[11px] text-gray-400 pt-1 border-t border-[#173250]">
                 {config.physicalAddress}
@@ -90,89 +92,89 @@ export const Footer: React.FC<FooterProps> = ({
             </div>
           </div>
 
-          {/* Column 2: Solutions & Categories */}
+          {/* Column 2: Core HVAC Solutions */}
           <div className="space-y-3">
             <h4 className="font-['Manrope'] font-bold text-white text-sm uppercase tracking-wider">
-              Cooling Fans
+              Core HVAC Solutions
             </h4>
             <ul className="space-y-2 text-xs text-gray-300">
               <li>
-                <button onClick={() => onNavigate('products')} className="hover:text-[#20B8CE] transition-colors text-left">
-                  Industrial HVLS Ceiling Fans (7.3m & 4.9m)
+                <button onClick={() => onNavigate('core-solutions')} className="hover:text-[#20B8CE] transition-colors text-left">
+                  Industrial HVAC Systems & Rooftops
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('products')} className="hover:text-[#20B8CE] transition-colors text-left">
-                  Commercial Ceiling Fans (1400mm)
+                <button onClick={() => onNavigate('core-solutions')} className="hover:text-[#20B8CE] transition-colors text-left">
+                  Industrial Liquid Chillers & Towers
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('products')} className="hover:text-[#20B8CE] transition-colors text-left">
-                  Solid Timber & Designer Ceiling Fans
+                <button onClick={() => onNavigate('core-solutions')} className="hover:text-[#20B8CE] transition-colors text-left">
+                  Commercial Air Conditioning (VRV/VRF)
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('products')} className="hover:text-[#20B8CE] transition-colors text-left">
-                  All-Weather Patio & Braai Fans
+                <button onClick={() => onNavigate('core-solutions')} className="hover:text-[#20B8CE] transition-colors text-left">
+                  Commercial Cooling Systems (Malls & Atriums)
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('products')} className="hover:text-[#20B8CE] transition-colors text-left">
-                  Wall-Mounted Oscillating Fans (750mm)
+                <button onClick={() => onNavigate('core-solutions')} className="hover:text-[#20B8CE] transition-colors text-left">
+                  Industrial Refrigeration & Cold Chain
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('products')} className="hover:text-[#20B8CE] transition-colors text-left">
-                  Heavy-Duty Pedestal & Floor Drum Fans
+                <button onClick={() => onNavigate('core-solutions')} className="hover:text-[#20B8CE] transition-colors text-left">
+                  Ventilation & Spiral Ducting Systems
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('products')} className="hover:text-[#20B8CE] transition-colors text-left">
-                  Industrial Evaporative Air Coolers
+                <button onClick={() => onNavigate('core-solutions')} className="hover:text-[#20B8CE] transition-colors text-left">
+                  Centralised Cooling & Plant Infrastructure
                 </button>
               </li>
             </ul>
           </div>
 
-          {/* Column 3: Installation & Industries */}
+          {/* Column 3: Fencing & Other Services */}
           <div className="space-y-3">
             <h4 className="font-['Manrope'] font-bold text-white text-sm uppercase tracking-wider">
-              Services & Sectors
+              Fencing & Other Services
             </h4>
             <ul className="space-y-2 text-xs text-gray-300">
               <li>
-                <button onClick={() => onNavigate('services')} className="hover:text-[#20B8CE] transition-colors text-left">
-                  Commercial & Industrial Installation
+                <button onClick={() => onNavigate('fencing-security')} className="hover:text-[#20B8CE] transition-colors text-left">
+                  Industrial Palisade Security Fencing
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('services')} className="hover:text-[#20B8CE] transition-colors text-left">
-                  Certified HVLS Fan Rigging
+                <button onClick={() => onNavigate('fencing-security')} className="hover:text-[#20B8CE] transition-colors text-left">
+                  Anti-Climb High-Security Mesh
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('services')} className="hover:text-[#20B8CE] transition-colors text-left">
-                  Electrical & Mechanical CoC Sign-Off
+                <button onClick={() => onNavigate('fencing-security')} className="hover:text-[#20B8CE] transition-colors text-left">
+                  Steel Fencing & Perimeter Gates
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('industries')} className="hover:text-[#20B8CE] transition-colors text-left">
-                  Schools & Universities (Education)
+                <button onClick={() => onNavigate('other-services')} className="hover:text-[#20B8CE] transition-colors text-left">
+                  Cold Rooms & Blast Freezers
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('industries')} className="hover:text-[#20B8CE] transition-colors text-left">
-                  Healthcare & Hospital Airflow
+                <button onClick={() => onNavigate('other-services')} className="hover:text-[#20B8CE] transition-colors text-left">
+                  Swimming Pool Industrial Heat Pumps
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('industries')} className="hover:text-[#20B8CE] transition-colors text-left">
-                  Religious Auditoriums & Churches
+                <button onClick={() => onNavigate('other-services')} className="hover:text-[#20B8CE] transition-colors text-left">
+                  Automotive Diagnostics & Fleet HVAC
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('maintenance')} className="hover:text-[#20B8CE] transition-colors text-left">
-                  Annual Maintenance Agreements (SLA)
+                <button onClick={() => onNavigate('other-services')} className="hover:text-[#20B8CE] transition-colors text-left">
+                  Electrical & Plumbing Contracting
                 </button>
               </li>
             </ul>
@@ -185,13 +187,13 @@ export const Footer: React.FC<FooterProps> = ({
             </h4>
             <div className="space-y-2 text-xs text-gray-300">
               <div>
-                <span className="font-semibold text-white">Johannesburg:</span> Sandton, Randburg, Roodepoort, Soweto, CBD.
+                <span className="font-semibold text-white">Johannesburg:</span> Sandton, Rosebank, Randburg, CBD.
               </div>
               <div>
-                <span className="font-semibold text-white">Ekurhuleni:</span> Kempton Park, Boksburg, Germiston, Benoni, Alberton.
+                <span className="font-semibold text-white">Ekurhuleni:</span> Kempton Park, Boksburg, Germiston, Benoni.
               </div>
               <div>
-                <span className="font-semibold text-white">Tshwane (Pretoria):</span> Menlyn, Centurion, Hatfield, Rosslyn.
+                <span className="font-semibold text-white">Tshwane (Pretoria):</span> Centurion, Menlyn, Rosslyn.
               </div>
               <div>
                 <span className="font-semibold text-white">Greater Gauteng:</span> Midrand, Vanderbijlpark & Vaal.
@@ -200,12 +202,13 @@ export const Footer: React.FC<FooterProps> = ({
 
             <div className="pt-3 border-t border-[#173250]">
               <div className="text-[11px] text-[#20B8CE] font-semibold mb-1">
-                South African Standards:
+                Engineering Compliance:
               </div>
               <div className="text-[10px] text-gray-400 space-y-0.5">
-                <div>• SANS 10142-1 (Wiring of Premises)</div>
+                <div>• SANS 10142-1 (Wiring Code of Practice)</div>
                 <div>• SANS 10400-O (Building Ventilation)</div>
-                <div>• OHSAct 85 of 1993 Health & Safety</div>
+                <div>• OHSAct 85 of 1993 Machine Safety</div>
+                <div>• SARACCA Gas Safety Aligned</div>
               </div>
             </div>
           </div>
@@ -231,10 +234,10 @@ export const Footer: React.FC<FooterProps> = ({
             </button>
             <span>•</span>
             <button
-              onClick={() => onNavigate('service-area')}
+              onClick={() => onNavigate('contact')}
               className="hover:text-white transition-colors"
             >
-              Gauteng Service Matrix
+              Direct Engineering Contact
             </button>
             <span>•</span>
             <button

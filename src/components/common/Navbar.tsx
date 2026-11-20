@@ -13,7 +13,9 @@ import {
   Layers,
   Wrench,
   Sparkles,
-  ArrowRight
+  ArrowRight,
+  Shield,
+  Wind
 } from 'lucide-react';
 import { getCompanyConfig } from '../../data/companyConfig';
 
@@ -34,9 +36,8 @@ export const Navbar: React.FC<NavbarProps> = ({
 }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
+  const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
-  const [industriesDropdownOpen, setIndustriesDropdownOpen] = useState(false);
   const config = getCompanyConfig();
 
   useEffect(() => {
@@ -50,15 +51,14 @@ export const Navbar: React.FC<NavbarProps> = ({
   const handleNavClick = (sectionId: string) => {
     onNavigate(sectionId);
     setMobileMenuOpen(false);
-    setProductsDropdownOpen(false);
+    setSolutionsDropdownOpen(false);
     setServicesDropdownOpen(false);
-    setIndustriesDropdownOpen(false);
   };
 
   return (
     <header className="sticky top-0 z-40 w-full bg-white transition-all duration-300">
       {/* Top Utility Announcement Bar */}
-      <div className="bg-[#10243A] text-[#EEF3F7] text-xs py-2 px-4 border-b border-[#173250]">
+      <div className="bg-[#070E18] text-[#EEF3F7] text-xs py-2 px-4 border-b border-[#173250]">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
           <div className="flex items-center gap-3">
             <span className="flex items-center gap-1.5 text-[#20B8CE] font-semibold">
@@ -67,7 +67,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             </span>
             <span className="hidden sm:inline-block text-[#EEF3F7]/30">•</span>
             <span className="hidden sm:inline-block text-[#EEF3F7]/80">
-              SANS 10142-1 CoC Certified Installation
+              SANS 10142-1 CoC Certified Industrial HVAC & Infrastructure
             </span>
           </div>
 
@@ -86,7 +86,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1 text-emerald-400 hover:text-emerald-300 transition-colors font-medium"
-              title="WhatsApp Specialist"
+              title="WhatsApp Emergency Dispatch"
             >
               <span>WhatsApp: {config.emergencyHotline}</span>
             </a>
@@ -119,173 +119,113 @@ export const Navbar: React.FC<NavbarProps> = ({
 
           {/* Desktop Navigation Links */}
           <nav className="hidden lg:flex items-center gap-1 text-sm font-semibold text-[#10243A]">
-            {/* Products Dropdown */}
+            {/* Core HVAC Solutions Dropdown */}
             <div
               className="relative"
-              onMouseEnter={() => setProductsDropdownOpen(true)}
-              onMouseLeave={() => setProductsDropdownOpen(false)}
+              onMouseEnter={() => setSolutionsDropdownOpen(true)}
+              onMouseLeave={() => setSolutionsDropdownOpen(false)}
             >
               <button
-                onClick={() => handleNavClick('products')}
+                onClick={() => handleNavClick('core-solutions')}
                 className={`px-3 py-2 rounded-lg flex items-center gap-1 transition-colors hover:text-[#1479D4] ${
-                  activeSection === 'products' ? 'text-[#1479D4] bg-[#EEF3F7]' : ''
+                  activeSection === 'core-solutions' ? 'text-[#1479D4] bg-[#EEF3F7]' : ''
                 }`}
               >
-                <span>Cooling Fans</span>
+                <span>Industrial HVAC Solutions</span>
                 <ChevronDown className="w-4 h-4 opacity-70" />
               </button>
 
-              {productsDropdownOpen && (
-                <div className="absolute top-full left-0 w-72 bg-white rounded-xl shadow-xl border border-gray-100 p-3 py-2 mt-1 space-y-1 animate-fadeIn z-50">
-                  <button
-                    onClick={() => handleNavClick('products')}
-                    className="w-full text-left px-3 py-2 rounded-lg hover:bg-[#EEF3F7] text-xs font-bold text-[#10243A] uppercase tracking-wider flex items-center justify-between"
-                  >
-                    <span>All Cooling Fans</span>
-                    <ArrowRight className="w-3.5 h-3.5 text-[#1479D4]" />
-                  </button>
-                  <div className="border-t border-gray-100 my-1"></div>
-                  <button
-                    onClick={() => handleNavClick('products')}
-                    className="w-full text-left px-3 py-2 rounded-lg hover:bg-[#EEF3F7] text-xs text-[#10243A]"
-                  >
-                    <div className="font-semibold text-[#1479D4]">Ceiling & HVLS Fans</div>
-                    <div className="text-[11px] text-gray-500">Living rooms, halls, warehouses & patios</div>
-                  </button>
-                  <button
-                    onClick={() => handleNavClick('products')}
-                    className="w-full text-left px-3 py-2 rounded-lg hover:bg-[#EEF3F7] text-xs text-[#10243A]"
-                  >
-                    <div className="font-semibold text-[#1479D4]">Wall & Pedestal Fans</div>
-                    <div className="text-[11px] text-gray-500">750mm oscillating industrial fans & stands</div>
-                  </button>
-                  <button
-                    onClick={() => handleNavClick('products')}
-                    className="w-full text-left px-3 py-2 rounded-lg hover:bg-[#EEF3F7] text-xs text-[#10243A]"
-                  >
-                    <div className="font-semibold text-[#1479D4]">Portable & Evaporative Coolers</div>
-                    <div className="text-[11px] text-gray-500">Floor drums, air cannons & evaporative cooling</div>
-                  </button>
-                </div>
-              )}
-            </div>
-
-            {/* Installation Services Dropdown */}
-            <div
-              className="relative"
-              onMouseEnter={() => setServicesDropdownOpen(true)}
-              onMouseLeave={() => setServicesDropdownOpen(false)}
-            >
-              <button
-                onClick={() => handleNavClick('services')}
-                className={`px-3 py-2 rounded-lg flex items-center gap-1 transition-colors hover:text-[#1479D4] ${
-                  activeSection === 'services' ? 'text-[#1479D4] bg-[#EEF3F7]' : ''
-                }`}
-              >
-                <span>Installation Services</span>
-                <ChevronDown className="w-4 h-4 opacity-70" />
-              </button>
-
-              {servicesDropdownOpen && (
+              {solutionsDropdownOpen && (
                 <div className="absolute top-full left-0 w-80 bg-white rounded-xl shadow-xl border border-gray-100 p-3 py-2 mt-1 space-y-1 animate-fadeIn z-50">
                   <button
-                    onClick={() => handleNavClick('services')}
+                    onClick={() => handleNavClick('core-solutions')}
                     className="w-full text-left px-3 py-2 rounded-lg hover:bg-[#EEF3F7] text-xs font-bold text-[#10243A] uppercase tracking-wider flex items-center justify-between"
                   >
-                    <span>Installation & Wiring</span>
+                    <span>All Core HVAC Solutions</span>
                     <ArrowRight className="w-3.5 h-3.5 text-[#1479D4]" />
                   </button>
                   <div className="border-t border-gray-100 my-1"></div>
-                  <div className="grid grid-cols-1 gap-1 text-xs">
-                    <button
-                      onClick={() => handleNavClick('services')}
-                      className="text-left px-3 py-1.5 rounded hover:bg-[#EEF3F7] text-gray-700 hover:text-[#1479D4]"
-                    >
-                      • Residential Ceiling Fan Installation
-                    </button>
-                    <button
-                      onClick={() => handleNavClick('services')}
-                      className="text-left px-3 py-1.5 rounded hover:bg-[#EEF3F7] text-gray-700 hover:text-[#1479D4]"
-                    >
-                      • Commercial & School Hall Fan Installations
-                    </button>
-                    <button
-                      onClick={() => handleNavClick('services')}
-                      className="text-left px-3 py-1.5 rounded hover:bg-[#EEF3F7] text-gray-700 hover:text-[#1479D4]"
-                    >
-                      • Industrial Warehouse HVLS Fan Rigging
-                    </button>
-                    <button
-                      onClick={() => handleNavClick('services')}
-                      className="text-left px-3 py-1.5 rounded hover:bg-[#EEF3F7] text-gray-700 hover:text-[#1479D4]"
-                    >
-                      • Electrical Connection & SANS 10142-1 CoC
-                    </button>
-                  </div>
+                  <button
+                    onClick={() => handleNavClick('core-solutions')}
+                    className="w-full text-left px-3 py-2 rounded-lg hover:bg-[#EEF3F7] text-xs text-[#10243A]"
+                  >
+                    <div className="font-semibold text-[#1479D4]">Industrial HVAC & Rooftop Units</div>
+                    <div className="text-[11px] text-gray-500">Commercial packaged plants & air handlers</div>
+                  </button>
+                  <button
+                    onClick={() => handleNavClick('core-solutions')}
+                    className="w-full text-left px-3 py-2 rounded-lg hover:bg-[#EEF3F7] text-xs text-[#10243A]"
+                  >
+                    <div className="font-semibold text-[#1479D4]">Industrial Chillers & Cooling Towers</div>
+                    <div className="text-[11px] text-gray-500">Water-cooled, air-cooled & process chillers</div>
+                  </button>
+                  <button
+                    onClick={() => handleNavClick('core-solutions')}
+                    className="w-full text-left px-3 py-2 rounded-lg hover:bg-[#EEF3F7] text-xs text-[#10243A]"
+                  >
+                    <div className="font-semibold text-[#1479D4]">Commercial Air Conditioning & VRV/VRF</div>
+                    <div className="text-[11px] text-gray-500">Zoned multi-split climate control networks</div>
+                  </button>
+                  <button
+                    onClick={() => handleNavClick('core-solutions')}
+                    className="w-full text-left px-3 py-2 rounded-lg hover:bg-[#EEF3F7] text-xs text-[#10243A]"
+                  >
+                    <div className="font-semibold text-[#1479D4]">Ventilation & Spiral Ductwork</div>
+                    <div className="text-[11px] text-gray-500">Galvanized ducting & smoke spill fans</div>
+                  </button>
                 </div>
               )}
             </div>
 
-            {/* Industries Dropdown */}
-            <div
-              className="relative"
-              onMouseEnter={() => setIndustriesDropdownOpen(true)}
-              onMouseLeave={() => setIndustriesDropdownOpen(false)}
-            >
-              <button
-                onClick={() => handleNavClick('industries')}
-                className={`px-3 py-2 rounded-lg flex items-center gap-1 transition-colors hover:text-[#1479D4] ${
-                  activeSection === 'industries' ? 'text-[#1479D4] bg-[#EEF3F7]' : ''
-                }`}
-              >
-                <span>Industries</span>
-                <ChevronDown className="w-4 h-4 opacity-70" />
-              </button>
-
-              {industriesDropdownOpen && (
-                <div className="absolute top-full left-0 w-64 bg-white rounded-xl shadow-xl border border-gray-100 p-2 mt-1 space-y-0.5 animate-fadeIn z-50 text-xs">
-                  {['Education', 'Healthcare', 'Religious Institutions', 'Commercial', 'Industrial', 'Hospitality'].map((ind) => (
-                    <button
-                      key={ind}
-                      onClick={() => handleNavClick('industries')}
-                      className="w-full text-left px-3 py-2 rounded-lg hover:bg-[#EEF3F7] text-gray-700 hover:text-[#1479D4] font-medium"
-                    >
-                      {ind}
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* Gauteng Service Area Link */}
+            {/* Fencing & Security Link */}
             <button
-              onClick={() => handleNavClick('service-area')}
-              className={`px-3 py-2 rounded-lg transition-colors hover:text-[#1479D4] ${
-                activeSection === 'service-area' ? 'text-[#1479D4] bg-[#EEF3F7]' : ''
-              }`}
-            >
-              Gauteng Service Area
-            </button>
-
-            {/* Portfolio Link */}
-            <button
-              onClick={() => handleNavClick('portfolio')}
-              className={`px-3 py-2 rounded-lg transition-colors hover:text-[#1479D4] ${
-                activeSection === 'portfolio' ? 'text-[#1479D4] bg-[#EEF3F7]' : ''
-              }`}
-            >
-              Projects
-            </button>
-
-            {/* Maintenance Link */}
-            <button
-              onClick={() => handleNavClick('maintenance')}
+              onClick={() => handleNavClick('fencing-security')}
               className={`px-3 py-2 rounded-lg transition-colors hover:text-[#1479D4] flex items-center gap-1 ${
-                activeSection === 'maintenance' ? 'text-[#1479D4] bg-[#EEF3F7]' : ''
+                activeSection === 'fencing-security' ? 'text-[#1479D4] bg-[#EEF3F7]' : ''
               }`}
             >
-              <Wrench className="w-3.5 h-3.5 text-[#1479D4]" />
-              <span>Maintenance SLA</span>
+              <Shield className="w-3.5 h-3.5 text-[#1479D4]" />
+              <span>Fencing & Security</span>
+            </button>
+
+            {/* Other Services Link */}
+            <button
+              onClick={() => handleNavClick('other-services')}
+              className={`px-3 py-2 rounded-lg transition-colors hover:text-[#1479D4] ${
+                activeSection === 'other-services' ? 'text-[#1479D4] bg-[#EEF3F7]' : ''
+              }`}
+            >
+              Other Services
+            </button>
+
+            {/* Industries Link */}
+            <button
+              onClick={() => handleNavClick('industries')}
+              className={`px-3 py-2 rounded-lg transition-colors hover:text-[#1479D4] ${
+                activeSection === 'industries' ? 'text-[#1479D4] bg-[#EEF3F7]' : ''
+              }`}
+            >
+              Industries We Serve
+            </button>
+
+            {/* Why Choose Us Link */}
+            <button
+              onClick={() => handleNavClick('why-us')}
+              className={`px-3 py-2 rounded-lg transition-colors hover:text-[#1479D4] ${
+                activeSection === 'why-us' ? 'text-[#1479D4] bg-[#EEF3F7]' : ''
+              }`}
+            >
+              Why Choose Us
+            </button>
+
+            {/* Contact Link */}
+            <button
+              onClick={() => handleNavClick('contact')}
+              className={`px-3 py-2 rounded-lg transition-colors hover:text-[#1479D4] ${
+                activeSection === 'contact' ? 'text-[#1479D4] bg-[#EEF3F7]' : ''
+              }`}
+            >
+              Contact Us
             </button>
           </nav>
 
@@ -293,10 +233,10 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div className="hidden sm:flex items-center gap-3">
             <button
               onClick={() => onOpenQuote()}
-              className="px-5 py-2.5 bg-[#1479D4] hover:bg-[#10243A] text-white font-['Manrope'] font-bold text-sm rounded-lg shadow-md hover:shadow-lg transition-all duration-200 flex items-center gap-2 group cursor-pointer"
+              className="px-5 py-2.5 bg-gradient-to-r from-[#1479D4] to-[#20B8CE] hover:from-[#20B8CE] hover:to-[#1479D4] text-[#070E18] font-['Manrope'] font-black text-sm rounded-lg shadow-md hover:shadow-cyan-400/25 transition-all duration-200 flex items-center gap-2 group cursor-pointer"
             >
               <span>REQUEST A QUOTE</span>
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1 text-[#20B8CE]" />
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1 text-[#070E18]" />
             </button>
           </div>
 
@@ -316,41 +256,40 @@ export const Navbar: React.FC<NavbarProps> = ({
         <div className="lg:hidden border-b border-gray-200 bg-white px-4 pt-2 pb-6 space-y-3 animate-fadeIn">
           <div className="flex flex-col space-y-1 font-semibold text-sm">
             <button
-              onClick={() => handleNavClick('products')}
-              className="text-left px-3 py-2.5 rounded-lg hover:bg-[#EEF3F7] text-[#10243A]"
+              onClick={() => handleNavClick('core-solutions')}
+              className="text-left px-3 py-2.5 rounded-lg hover:bg-[#EEF3F7] text-[#1479D4] font-bold"
             >
-              Cooling Fans Catalogue
+              • Industrial HVAC & Cooling Solutions
             </button>
             <button
-              onClick={() => handleNavClick('services')}
+              onClick={() => handleNavClick('fencing-security')}
               className="text-left px-3 py-2.5 rounded-lg hover:bg-[#EEF3F7] text-[#10243A]"
             >
-              Installation & Wiring Services
+              • Fencing & Security Solutions
+            </button>
+            <button
+              onClick={() => handleNavClick('other-services')}
+              className="text-left px-3 py-2.5 rounded-lg hover:bg-[#EEF3F7] text-[#10243A]"
+            >
+              • Other Mechanical & Technical Services
             </button>
             <button
               onClick={() => handleNavClick('industries')}
               className="text-left px-3 py-2.5 rounded-lg hover:bg-[#EEF3F7] text-[#10243A]"
             >
-              Sectors (Homes, Schools, Halls & Warehouses)
+              • Industries We Serve (Malls, Plants, Hubs)
             </button>
             <button
-              onClick={() => handleNavClick('service-area')}
+              onClick={() => handleNavClick('why-us')}
               className="text-left px-3 py-2.5 rounded-lg hover:bg-[#EEF3F7] text-[#10243A]"
             >
-              Gauteng Service Coverage
+              • Why Choose Us
             </button>
             <button
-              onClick={() => handleNavClick('portfolio')}
+              onClick={() => handleNavClick('contact')}
               className="text-left px-3 py-2.5 rounded-lg hover:bg-[#EEF3F7] text-[#10243A]"
             >
-              Completed Installations
-            </button>
-            <button
-              onClick={() => handleNavClick('maintenance')}
-              className="text-left px-3 py-2.5 rounded-lg hover:bg-[#EEF3F7] text-[#10243A] flex items-center gap-2"
-            >
-              <Wrench className="w-4 h-4 text-[#1479D4]" />
-              <span>Maintenance & Servicing</span>
+              • Contact Engineering Team
             </button>
           </div>
 
@@ -362,7 +301,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               }}
               className="w-full py-3 bg-[#1479D4] text-white font-['Manrope'] font-bold text-center rounded-lg shadow-sm"
             >
-              REQUEST A QUOTE
+              REQUEST AN ENGINEERING QUOTE
             </button>
             <div className="grid grid-cols-2 gap-2 text-xs">
               <button
